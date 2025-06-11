@@ -10135,10 +10135,7 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
   font-optical-sizing: auto;
   font-style: normal;
 }
-.more-btn{
-  width: 100%;
-  padding-left: 16%;
-}
+
 .more-btn button{
   border-radius: 7px !important;
   padding-left: 20px !important;
@@ -10164,7 +10161,4 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
   .faq-image{
     min-height: auto !important;
   }
-  .more-btn{
-  padding-left: 10%;
-}
 }
