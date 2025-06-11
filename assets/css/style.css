@@ -10164,5 +10164,7 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
   .faq-image{
     min-height: auto !important;
   }
-  
+  .more-btn{
+  padding-left: 10%;
+}
 }
