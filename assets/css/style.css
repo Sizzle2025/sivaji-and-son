@@ -10080,7 +10080,7 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
 }
 
 
-
+/* 
 .over{
     width: 100%;
     height: 100vh;
@@ -10129,7 +10129,7 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
     75%{opacity: 0;}
     90%{opacity: 9;}
     100%{opacity: 1;}
-}
+} */
 .title-font{
    font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
