@@ -6098,7 +6098,6 @@ font-size: 18px;
   }
 }
 .feature-item:hover {
-  background-color: #3DBA57;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 .feature-item:hover .feature-icon::before {
@@ -10168,4 +10167,76 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
   .faq-image{
     min-height: auto !important;
   }
+}
+
+@keyframes iconShake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+.icon-shake {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.icon-shake:hover {
+  color: #3DBA57 !important;
+  transform: translateX(4px); /* slight right move */
+}
+
+.icon-shake:hover i {
+  animation: iconShake 0.3s ease;
+}
+
+.more-visa-btn{
+  background-color: white;
+  border: none;
+}
+.more-visa-btn:hover{
+  color: green !important;
+  border: 0px !important;
+}
+
+.feature-item {
+  position: relative;
+  overflow: hidden;
+  min-height: 200px; /* Adjust as needed */
+  background-color: #fff;
+}
+
+.feature-item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0); /* Transparent by default */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon-overlay {
+  max-width: 70%;
+  max-height: 70%;
+  opacity: 0.2; /* Reduce visibility */
+  transition: transform 0.4s ease;
+}
+
+/* Content stays centered */
+.feature-content {
+  position: relative;
+  z-index: 2;
+  padding: 1rem;
+}
+
+/* Show overlay image on hover */
+.feature-item:hover .feature-item-overlay {
+  opacity: 1;
 }
