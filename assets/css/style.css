@@ -10223,8 +10223,8 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
 }
 
 .feature-icon-overlay {
-  max-width: 70%;
-  max-height: 70%;
+  max-width: 100%;
+  max-height: 100%;
   opacity: 0.2; /* Reduce visibility */
   transition: transform 0.4s ease;
 }
@@ -10233,7 +10233,6 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
 .feature-content {
   position: relative;
   z-index: 2;
-  padding: 1rem;
 }
 
 /* Show overlay image on hover */
