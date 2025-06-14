@@ -1550,14 +1550,14 @@ input::-moz-focus-inner {
 .btn--base.active {
   background: transparent;
   border: 1px solid transparent;
-  color: #dcbb87;
+  color: #3DBA57;
 }
 .btn--base.active:hover {
   color: #19232d;
   background: #dcbb87;
 }
 .btn--base:focus, .btn--base:hover {
-  color: #dcbb87;
+  color: #3DBA57;
   background-color: transparent;
 }
 @media only screen and (max-width: 991px) {
@@ -6735,11 +6735,11 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
   color: #19232d;
   transition: all 0.5s;
 }
-.book-form button:hover i, .book-form input[type="button"]:hover i, .book-form input[type="reset"]:hover i, .book-form input[type="submit"]:hover i {
+/* .book-form button:hover i, .book-form input[type="button"]:hover i, .book-form input[type="reset"]:hover i, .book-form input[type="submit"]:hover i {
   transform: rotate(40deg);
-}
+} */
 .book-form button:hover i::before, .book-form input[type="button"]:hover i::before, .book-form input[type="reset"]:hover i::before, .book-form input[type="submit"]:hover i::before {
-  color: #dcbb87;
+  color: darkslategray;
 }
 
 .book-quantity .book-plus-minus {
@@ -8779,6 +8779,7 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
   border-radius: 50%;
   color: #3DBA57;
   font-size: 24px;
+  transition: all 1s ease;
 }
 .contact-widget .contact-item-list li .contact-item-content {
   width: calc(100% - 60px);
@@ -8797,6 +8798,7 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
 .contact-widget .contact-item-list li .contact-item-content p {
   margin-bottom: 0;
   font-weight: 600;
+  transition: all 1s ease;
 }
 
 .map-area {
@@ -10086,56 +10088,6 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
 }
 
 
-/* 
-.over{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation-name: overo;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
-    opacity: 0;
-    position: absolute;
-}
-@keyframes overo {
-    0%{
-        opacity: 1;
-    }
-    25%{
-        opacity: 1;
-    }50%{
-        opacity: 1;
-    }75%{
-        opacity: 9;
-    }85%{
-        opacity: 8;
-    }
-    100%{
-        opacity: 0;
-        display: none;
-    }
-}
-.giff{
-    height: 100%;
-    width: 100%;
-}
-.page-wrapper{
-    opacity: 0;
-    animation-name: ma;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
-    overflow: hidden;
-}
-@keyframes ma {
-    0%{opacity: 0;}
-    25%{opacity: 0;}
-    50%{opacity: 0;}
-    75%{opacity: 0;}
-    90%{opacity: 9;}
-    100%{opacity: 1;}
-} */
 .title-font{
    font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
@@ -10238,4 +10190,25 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
 /* Show overlay image on hover */
 .feature-item:hover .feature-item-overlay {
   opacity: 1;
+}
+
+.contact-widget .contact-item-list li .contact-item-icon:hover {
+  background-color: #3DBA57;
+  color: white;
+}
+
+.contact-widget .contact-item-list li .contact-item-content p:hover {
+  color: #28a745;
+}
+
+
+.whatsapp-btn {
+  background: #3DBA57 !important;
+  border: 1px solid #3DBA57;
+  color: #19232d;
+  padding: 12px 25px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
 }
