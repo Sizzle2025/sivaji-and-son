@@ -5049,10 +5049,17 @@ font-size: 18px;
     font-size: 12px;
   }
 }
-.aboutuss:hover{
-color: #3DBA57 !important;
-transform: scale(1.3);
+.aboutuss {
+  position: relative;
+  transition: top 0.3s ease, color 0.3s ease;
 }
+
+.aboutuss:hover {
+  top: -6px;
+  color: #3DBA57 !important;
+}
+
+
 
 .client-slider-wrapper {
   margin: -20px;
