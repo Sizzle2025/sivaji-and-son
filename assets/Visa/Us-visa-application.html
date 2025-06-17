@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Visa Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .form-section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .section-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 80px;
+        }
+        .radio-group, .checkbox-group {
+            margin-top: 5px;
+        }
+        .radio-group label, .checkbox-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        .sub-section {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 2px solid #eee;
+        }
+        .btn {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>US Visa Application Form</h1>
+    
+    <form action="#" method="post">
+        <div class="form-section">
+            <div class="section-title">START NEW APPLICATION</div>
+            <div class="form-group">
+                <label for="security_answer">Security Question's Answer (Password):</label>
+                <input type="password" id="security_answer" name="security_answer" required>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="section-title">Personal Information 1</div>
+            
+            <div class="form-group">
+                <label for="surnames">Surnames:</label>
+                <input type="text" id="surnames" name="surnames" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="given_names">Given Names:</label>
+                <input type="text" id="given_names" name="given_names" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="native_name">Full Name in Native Alphabet:</label>
+                <input type="text" id="native_name" name="native_name">
+            </div>
+            
+            <div class="form-group">
+                <label>Have you ever used other names (i.e., maiden, religious, professional, alias, etc.)?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="other_names" value="yes"> Yes</label>
+                    <label><input type="radio" name="other_names" value="no" checked> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Do you have a telecode that represents your name?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="telecode" value="yes"> Yes</label>
+                    <label><input type="radio" name="telecode" value="no" checked> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="sex">Sex:</label>
+                <select id="sex" name="sex" required>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="marital_status">Marital Status:</label>
+                <select id="marital_status" name="marital_status" required>
+                    <option value="">Select</option>
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="divorced">Divorced</option>
+                    <option value="widowed">Widowed</option>
+                    <option value="separated">Separated</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="city_of_birth">City of Birth:</label>
+                <input type="text" id="city_of_birth" name="city_of_birth" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="place_of_birth">Place of Birth:</label>
+                <input type="text" id="place_of_birth" name="place_of_birth" required>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="section-title">Personal Information 2</div>
+            
+            <div class="form-group">
+                <label for="nationality">Nationality:</label>
+                <input type="text" id="nationality" name="nationality" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Do you hold or have you held any nationality other than the one indicated above?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="other_nationality" value="yes"> Yes</label>
+                    <label><input type="radio" name="other_nationality" value="no" checked> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="national_id">National Identification Number:</label>
+                <input type="text" id="national_id" name="national_id">
+            </div>
+            
+            <div class="form-group">
+                <label for="ssn">U.S. Social Security Number:</label>
+                <input type="text" id="ssn" name="ssn">
+            </div>
+            
+            <div class="form-group">
+                <label for="tax_id">U.S. Taxpayer ID Number:</label>
+                <input type="text" id="tax_id" name="tax_id">
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="section-title">Address and Phone Information</div>
+            
+            <div class="form-group">
+                <label for="home_address">Home Address (Line 1):</label>
+                <input type="text" id="home_address" name="home_address" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="home_address2">Home Address (Line 2):</label>
+                <input type="text" id="home_address2" name="home_address2">
+            </div>
+            
+            <div class="form-group">
+                <label for="home_city">City:</label>
+                <input type="text" id="home_city" name="home_city" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="home_state">State:</label>
+                <input type="text" id="home_state" name="home_state">
+            </div>
+            
+            <div class="form-group">
+                <label for="home_zip">Postal Zone/ZIP Code:</label>
+                <input type="text" id="home_zip" name="home_zip" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="home_country">Country:</label>
+                <input type="text" id="home_country" name="home_country" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Is your Mailing Address the same as your Home Address?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="same_mailing" value="yes" checked> Yes</label>
+                    <label><input type="radio" name="same_mailing" value="no"> No</label>
+                </div>
+            </div>
+            
+            <div id="mailing_address_section" style="display:none;">
+                <div class="form-group">
+                    <label for="mailing_address">Mailing Address (Line 1):</label>
+                    <input type="text" id="mailing_address" name="mailing_address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mailing_city">City:</label>
+                    <input type="text" id="mailing_city" name="mailing_city">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mailing_state">State:</label>
+                    <input type="text" id="mailing_state" name="mailing_state">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mailing_zip">Postal Zone/ZIP Code:</label>
+                    <input type="text" id="mailing_zip" name="mailing_zip">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mailing_country">Country:</label>
+                    <input type="text" id="mailing_country" name="mailing_country">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="primary_phone">Primary Phone Number:</label>
+                <input type="tel" id="primary_phone" name="primary_phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="secondary_phone">Secondary Phone Number:</label>
+                <input type="tel" id="secondary_phone" name="secondary_phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="work_phone">Work Phone Number:</label>
+                <input type="tel" id="work_phone" name="work_phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="section-title">Passport Information</div>
+            
+            <div class="form-group">
+                <label for="passport_type">Passport/Travel Document Type:</label>
+                <input type="text" id="passport_type" name="passport_type" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="passport_book_number">Passport Book Number:</label>
+                <input type="text" id="passport_book_number" name="passport_book_number">
+            </div>
+            
+            <div class="form-group">
+                <label for="passport_issuing_country">Country/Authority that Issued Passport/Travel Document:</label>
+                <input type="text" id="passport_issuing_country" name="passport_issuing_country" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="passport_issuing_place">Where was the Passport/Travel Document Issued?</label>
+                <input type="text" id="passport_issuing_place" name="passport_issuing_place" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="passport_issuing_city">City:</label>
+                <input type="text" id="passport_issuing_city" name="passport_issuing_city" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="passport_issuing_state">State/Province (If shown on passport):</label>
+                <input type="text" id="passport_issuing_state" name="passport_issuing_state">
+            </div>
+            
+            <div class="form-group">
+                <label for="passport_issuing_country2">Country:</label>
+                <input type="text" id="passport_issuing_country2" name="passport_issuing_country2" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="passport_issue_date">Issuance Date:</label>
+                <input type="date" id="passport_issue_date" name="passport_issue_date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="passport_expiry_date">Expiration Date:</label>
+                <input type="date" id="passport_expiry_date" name="passport_expiry_date" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Have you ever lost a passport or had one stolen?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="lost_passport" value="yes"> Yes</label>
+                    <label><input type="radio" name="lost_passport" value="no" checked> No</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="section-title">Travel Information</div>
+            
+            <div class="form-group">
+                <label for="trip_purpose">Purpose of Trip to the U.S.:</label>
+                <select id="trip_purpose" name="trip_purpose" required>
+                    <option value="">Select</option>
+                    <option value="business">TEMP. BUSINESS PLEASURE VISITOR(B)</option>
+                    <option value="conference">TEMP. BUSINESS CONFERENCE</option>
+                    <option value="tourism">Tourism</option>
+                    <option value="study">Study</option>
+                    <option value="work">Work</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="trip_specify">Specify:</label>
+                <input type="text" id="trip_specify" name="trip_specify">
+            </div>
+            
+            <div class="form-group">
+                <label>Have you made specific travel plans?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="specific_plans" value="yes"> Yes</label>
+                    <label><input type="radio" name="specific_plans" value="no" checked> No</label>
+                </div>
+            </div>
+            
+            <div id="travel_plans_yes" style="display:none;">
+                <div class="form-group">
+                    <label for="arrival_date">Date of Arrival in U.S. (DD/MM/YYYY):</label>
+                    <input type="date" id="arrival_date" name="arrival_date">
+                </div>
+                
+                <div class="form-group">
+                    <label for="arrival_flight">Arrival Flight (if known):</label>
+                    <input type="text" id="arrival_flight" name="arrival_flight">
+                </div>
+                
+                <div class="form-group">
+                    <label for="arrival_city">Arrival City:</label>
+                    <input type="text" id="arrival_city" name="arrival_city">
+                </div>
+                
+                <div class="form-group">
+                    <label for="departure_date">Date of Departure from U.S. (DD/MM/YYYY):</label>
+                    <input type="date" id="departure_date" name="departure_date">
+                </div>
+                
+                <div class="form-group">
+                    <label for="departure_flight">Departure Flight (if known):</label>
+                    <input type="text" id="departure_flight" name="departure_flight">
+                </div>
+                
+                <div class="form-group">
+                    <label for="departure_city">Departure City:</label>
+                    <input type="text" id="departure_city" name="departure_city">
+                </div>
+                
+                <div class="form-group">
+                    <label for="visit_locations">Provide the locations you plan to visit in the U.S.:</label>
+                    <textarea id="visit_locations" name="visit_locations"></textarea>
+                </div>
+            </div>
+            
+            <div id="travel_plans_no">
+                <div class="form-group">
+                    <label for="intended_arrival">Intended Date of Arrival in U.S.:</label>
+                    <input type="date" id="intended_arrival" name="intended_arrival">
+                </div>
+                
+                <div class="form-group">
+                    <label for="intended_stay">Intended Length of Stay in U.S.:</label>
+                    <input type="text" id="intended_stay" name="intended_stay">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="us_address_street">Address Where You Will Stay in the U.S. (Street address):</label>
+                <input type="text" id="us_address_street" name="us_address_street">
+            </div>
+            
+            <div class="form-group">
+                <label for="us_address_city">City:</label>
+                <input type="text" id="us_address_city" name="us_address_city">
+            </div>
+            
+            <div class="form-group">
+                <label for="us_address_state">State:</label>
+                <input type="text" id="us_address_state" name="us_address_state">
+            </div>
+            
+            <div class="form-group">
+                <label for="us_address_zip">ZIP Code:</label>
+                <input type="text" id="us_address_zip" name="us_address_zip">
+            </div>
+            
+            <div class="form-group">
+                <label for="trip_payer">Person/Entity Paying for Your Trip:</label>
+                <select id="trip_payer" name="trip_payer">
+                    <option value="">Select</option>
+                    <option value="self">Yourself</option>
+                    <option value="company">Company/Organization</option>
+                    <option value="other">Other Person</option>
+                </select>
+            </div>
+            
+            <div id="company_payer" style="display:none;">
+                <div class="form-group">
+                    <label for="company_name">Name of Company/Organization Paying for Trip:</label>
+                    <input type="text" id="company_name" name="company_name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="company_phone">Telephone Number:</label>
+                    <input type="tel" id="company_phone" name="company_phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="company_relationship">Relationship to You:</label>
+                    <input type="text" id="company_relationship" name="company_relationship">
+                </div>
+                
+                <div class="form-group">
+                    <label for="company_address">Address of Company/Organization Paying:</label>
+                    <input type="text" id="company_address" name="company_address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="company_city">City:</label>
+                    <input type="text" id="company_city" name="company_city">
+                </div>
+                
+                <div class="form-group">
+                    <label for="company_state">State:</label>
+                    <input type="text" id="company_state" name="company_state">
+                </div>
+                
+                <div class="form-group">
+                    <label for="company_zip">ZIP Code:</label>
+                    <input type="text" id="company_zip" name="company_zip">
+                </div>
+                
+                <div class="form-group">
+                    <label for="company_country">Country:</label>
+                    <input type="text" id="company_country" name="company_country">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="travel_companions">Persons traveling with you:</label>
+                <textarea id="travel_companions" name="travel_companions"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Are you traveling as part of a group or organization?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="group_travel" value="yes"> Yes</label>
+                    <label><input type="radio" name="group_travel" value="no" checked> No</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="section-title">Previous U.S. Travel Information</div>
+            
+            <div class="form-group">
+                <label>Have you ever been in the U.S.?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="been_in_us" value="yes"> Yes</label>
+                    <label><input type="radio" name="been_in_us" value="no" checked> No</label>
+                </div>
+            </div>
+            
+            <div id="previous_us_travel" style="display:none;">
+                <div class="form-group">
+                    <label for="last_arrival_date">Date Arrived:</label>
+                    <input type="date" id="last_arrival_date" name="last_arrival_date">
+                </div>
+                
+                <div class="form-group">
+                    <label for="last_stay_length">Length of Stay:</label>
+                    <input type="text" id="last_stay_length" name="last_stay_length">
+                </div>
+                
+                <div class="form-group">
+                    <label for="last_five_visits">Provide information on your last five U.S. visits:</label>
+                    <textarea id="last_five_visits" name="last_five_visits"></textarea>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Do you or did you ever hold a U.S. Driver's License?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="us_license" value="yes"> Yes</label>
+                    <label><input type="radio" name="us_license" value="no" checked> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Have you ever been issued a U.S. Visa?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="previous_visa" value="yes"> Yes</label>
+                    <label><input type="radio" name="previous_visa" value="no" checked> No</label>
+                </div>
+            </div>
+            
+            <div id="previous_visa_info" style="display:none;">
+                <div class="form-group">
+                    <label for="last_visa_date">Previous U.S. Visas Date Last Visa Was Issued:</label>
+                    <input type="date" id="last_visa_date" name="last_visa_date">
+                </div>
+                
+                <div class="form-group">
+                    <label for="visa_number">Visa Number:</label>
+                    <input type="text" id="visa_number" name="visa_number">
+                </div>
+                
+                <div class="form-group">
+                    <label>Are you applying for the same type of visa?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="same_visa_type" value="yes"> Yes</label>
+                        <label><input type="radio" name="same_visa_type" value="no" checked> No</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Are you applying in the same country where the visa above was issued and is this country your principal country of residence?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="same_country" value="yes"> Yes</label>
+                        <label><input type="radio" name="same_country" value="no" checked> No</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Have you been ten-printed?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="ten_printed" value="yes"> Yes</label>
+                        <label><input type="radio" name="ten_printed" value="no" checked> No</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Has your U.S. Visa ever been lost or stolen?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="visa_lost" value="yes"> Yes</label>
+                        <label><input type="radio" name="visa_lost" value="no" checked> No</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Has your U.S. Visa ever been cancelled or revoked?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="visa_revoked" value="yes"> Yes</label>
+                        <label><input type="radio" name="visa_revoked" value="no" checked> No</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Have you ever been refused a U.S. Visa, been refused admission to the United States, or withdrawn your application for admission at the port of entry?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="visa_refused" value="yes"> Yes</label>
+                    <label><input type="radio" name="visa_refused" value="no" checked> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Has anyone ever filed an immigrant petition on your behalf with the United States Citizenship and Immigration Services?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="immigrant_petition" value="yes"> Yes</label>
+                    <label><input type="radio" name="immigrant_petition" value="no" checked> No</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="section-title">U.S. Point of Contact Information</div>
+            
+            <div class="form-group">
+                <label for="contact_org">Contact Person or Organization in the United States (You can enter either Person OR Organization):</label>
+                <input type="text" id="contact_org" name="contact_org">
+            </div>
+            
+            <div class="form-group">
+                <label for="contact_relationship">Relationship to You:</label>
+                <input type="text" id="contact_relationship" name="contact_relationship">
+            </div>
+            
+            <div class="form-group">
+                <label for="contact_address">U.S. Street Address (Line 1):</label>
+                <input type="text" id="contact_address" name="contact_address">
+            </div>
+            
+            <div class="form-group">
+                <label for="contact_city">City:</label>
+                <input type="text" id="contact_city" name="contact_city">
+            </div>
+            
+            <div class="form-group">
+                <label for="contact_state">State:</label>
+                <input type="text" id="contact_state" name="contact_state">
+            </div>
+            
+            <div class="form-group">
+                <label for="contact_zip">ZIP Code:</label>
+                <input type="text" id="contact_zip" name="contact_zip">
+            </div>
+            
+            <div class="form-group">
+                <label for="contact_phone">Phone no:</label>
+                <input type="tel" id="contact_phone" name="contact_phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="contact_email">Email Address:</label>
+                <input type="email" id="contact_email" name="contact_email">
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="section-title">Family Information: Relatives</div>
+            
+            <div class="form-group">
+                <label for="father_name">Father's Full Name and Date of Birth:</label>
+                <input type="text" id="father_name" name="father_name">
+            </div>
+            
+            <div class="form-group">
+                <label for="mother_name">Mother's Full Name and Date of Birth:</label>
+                <input type="text" id="mother_name" name="mother_name">
+            </div>
+            
+            <div class="form-group">
+                <label>Do you have any immediate relatives, not including parents, in the United States?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="immediate_relatives" value="yes"> Yes</label>
+                    <label><input type="radio" name="immediate_relatives" value="no" checked> No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Do you have any other relatives in the United States?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="other_relatives" value="yes"> Yes</label>
+                    <label><input type="radio" name="other_relatives" value="no" checked> No</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="section-title">Family Information: Spouse</div>
+            
+            <div class="form-group">
+                <label for="spouse_surname">Spouse's Surnames:</label>
+                <input type="text" id="spouse_surname" name="spouse_surname">
+            </div>
+            
+            <div class="form-group">
+                <label for="spouse_given_names">Spouse's Given Names:</label>
+                <input type="text" id="spouse_given_names" name="spouse_given_names">
+            </div>
+            
+            <div class="form-group">
+                <label for="spouse_dob">Spouse's Date of Birth:</label>
+                <input type="date" id="spouse_dob" name="spouse_dob">
+            </div>
+            
+            <div class="form-group">
+                <label for="spouse_nationality">Spouse's Nationality:</label>
+                <input type="text" id="spouse_nationality" name="spouse_nationality">
+            </div>
+            
+            <div class="form-group">
+                <label for="spouse_birth_city">Spouse's Place of Birth: City</label>
+                <input type="text" id="spouse_birth_city" name="spouse_birth_city">
+            </div>
+            
+            <div class="form-group">
+                <label for="spouse_birth_country">Country:</label>
+                <input type="text" id="spouse_birth_country" name="spouse_birth_country">
+            </div>
+            
+            <div class="form-group">
+                <label for="spouse_address">Spouse's Address:</label>
+                <input type="text" id="spouse_address" name="spouse_address">
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="section-title">Present Work/Education/Training Information</div>
+            
+            <div class="form-group">
+                <label for="occupation">Primary Occupation:</label>
+                <input type="text" id="occupation" name="occupation" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="employer">Present Employer or School Name:</label>
+                <input type="text" id="employer" name="employer">
+            </div>
+            
+            <div class="form-group">
+                <label for="employer_address">Street Address (Line 1):</label>
+                <input type="text" id="employer_address" name="employer_address">
+            </div>
+            
+            <div class="form-group">
+                <label for="employer_city">City:</label>
+                <input type="text" id="employer_city" name="employer_city">
+            </div>
+            
+            <div class="form-group">
+                <label for="employer_state">State:</label>
+                <input type="text" id="employer_state" name="employer_state">
+            </div>
+            
+            <div class="form-group">
+                <label for="employer_zip">ZIP Code:</label>
+                <input type="text" id="employer_zip" name="employer_zip">
+            </div>
+            
+            <div class="form-group">
+                <label for="employer_phone">Phone No.:</label>
+                <input type="tel" id="employer_phone" name="employer_phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="employer_country">Country:</label>
+                <input type="text" id="employer_country" name="employer_country">
+            </div>
+            
+            <div class="form-group">
+                <label for="job_duties">Briefly describe your duties:</label>
+                <textarea id="job_duties" name="job_duties"></textarea>
+            </div>
+        </div>
+  <div class="form-section">
+    <div class="section-title">Previous Work / Training Information</div>
+    <div class="form-group"><label>Employer Name:</label><input type="text"></div>
+    <div class="form-group"><label>Street Address (Line 1):</label><input type="text"></div>
+    <div class="form-group"><label>City:</label><input type="text"></div>
+    <div class="form-group"><label>State:</label><input type="text"></div>
+    <div class="form-group"><label>ZIP Code:</label><input type="text"></div>
+    <div class="form-group"><label>Phone No.:</label><input type="text"></div>
+    <div class="form-group"><label>Country:</label><input type="text"></div>
+    <div class="form-group"><label>Job Title:</label><input type="text"></div>
+    <div class="form-group"><label>Supervisor's Surname:</label><input type="text"></div>
+    <div class="form-group"><label>Supervisor's Given Names:</label><input type="text"></div>
+    <div class="form-group"><label>Employment Date From:</label><input type="date"></div>
+    <div class="form-group"><label>Employment Date To:</label><input type="date"></div>
+    <div class="form-group"><label>Briefly describe your duties:</label><textarea rows="3"></textarea></div>
+  </div>
+
+  
+  <div class="form-section">
+    <div class="section-title">Education Information</div>
+    <div class="form-group"><label>Name of Institution:</label><input type="text"></div>
+    <div class="form-group"><label>Street Address (Line 1):</label><input type="text"></div>
+    <div class="form-group"><label>City:</label><input type="text"></div>
+    <div class="form-group"><label>State:</label><input type="text"></div>
+    <div class="form-group"><label>Postal Zone/ZIP Code:</label><input type="text"></div>
+    <div class="form-group"><label>Country:</label><input type="text"></div>
+    <div class="form-group"><label>Course of study:</label><input type="text"></div>
+    <div class="form-group"><label>Date of Attendance From:</label><input type="date"></div>
+    <div class="form-group"><label>Date of Attendance To:</label><input type="date"></div>
+  </div>
+
+  
+  <div class="form-section">
+    <div class="section-title">Additional Work/Education/Training Information</div>
+    <div class="form-group"><label>Do you belong to a clan or tribe?</label><input type="text"></div>
+    <div class="form-group"><label>Provide a List of Languages You Speak:</label><textarea rows="2"></textarea></div>
+    <div class="form-group"><label>Have you traveled to any countries within the last five years?</label><textarea rows="2"></textarea></div>
+    <div class="form-group"><label>Have you belonged to, contributed to, or worked for any professional, social, or charitable organization?</label><textarea rows="2"></textarea></div>
+    <div class="form-group"><label>Do you have any specialized skills or training?</label><textarea rows="2"></textarea></div>
+    <div class="form-group"><label>Have you ever served in the military?</label><input type="text"></div>
+    <div class="form-group"><label>Have you ever been involved with a paramilitary or insurgent group?</label><input type="text"></div>
+  </div>
+
+  <div class="form-section">
+    <div class="section-title">Security and Background: Part 1</div>
+    <div class="form-group"><label>Do you have a communicable disease of public health significance?</label><input type="text"></div>
+    <div class="form-group"><label>Mental/physical disorder posing threat?</label><input type="text"></div>
+    <div class="form-group"><label>Drug abuser or addict?</label><input type="text"></div>
+    <div class="form-group"><label>Ever arrested or convicted?</label><input type="text"></div>
+    <div class="form-group"><label>Violated controlled substances law?</label><input type="text"></div>
+    <div class="form-group"><label>Coming to US for prostitution or related activity?</label><input type="text"></div>
+    <div class="form-group"><label>Money laundering involvement?</label><input type="text"></div>
+    <div class="form-group"><label>Human trafficking involvement?</label><input type="text"></div>
+    <div class="form-group"><label>Assisting others in human trafficking?</label><input type="text"></div>
+    <div class="form-group"><label>Related to human trafficker and benefited?</label><input type="text"></div>
+    <div class="form-group"><label>Espionage or other illegal activity in US?</label><input type="text"></div>
+    <div class="form-group"><label>Terrorist activities?</label><input type="text"></div>
+    <div class="form-group"><label>Supporting terrorists?</label><input type="text"></div>
+    <div class="form-group"><label>Member of terrorist organization?</label><input type="text"></div>
+    <div class="form-group"><label>Genocide involvement?</label><input type="text"></div>
+    <div class="form-group"><label>Torture involvement?</label><input type="text"></div>
+    <div class="form-group"><label>Extrajudicial killings or violence?</label><input type="text"></div>
+    <div class="form-group"><label>Use of child soldiers?</label><input type="text"></div>
+    <div class="form-group"><label>Religious freedom violations?</label><input type="text"></div>
+    <div class="form-group"><label>Forced abortion or sterilization enforcement?</label><input type="text"></div>
+    <div class="form-group"><label>Coercive organ/tissue transplant?</label><input type="text"></div>
+    <div class="form-group"><label>Fraudulent visa or immigration attempt?</label><input type="text"></div>
+    <div class="form-group"><label>Withholding custody of US citizen child?</label><input type="text"></div>
+    <div class="form-group"><label>Illegal voting in the US?</label><input type="text"></div>
+    <div class="form-group"><label>Renounced US citizenship to avoid tax?</label><input type="text"></div>
+  </div>
+  <div class="form-section">
+    <div class="form-group"><input type="submit" placeholder="submit"></div>
+    </div>
+
+
+
+        
+    </form>
+</body>
+</html>
