@@ -137,3 +137,6 @@ button[type="submit"]:hover {
     }
 }
 
+.loader__plane {
+  fill: #dcbb87;
+}
