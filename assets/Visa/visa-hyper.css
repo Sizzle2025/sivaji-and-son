@@ -174,3 +174,18 @@ body {
 .call-widget-wrapper2 .call-widget-btn2 {
   left: -37% !important;
 }
+
+/* Initial wrapper transform */
+.call-widget-wrapper2 {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) translateX(300px);
+  transition: transform 0.4s ease;
+  z-index: 9999;
+}
+
+/* When checkbox is checked, slide in */
+#toggleForm:checked ~ .call-widget-wrapper2 {
+  transform: translateY(-50%) translateX(0px);
+}
