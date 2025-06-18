@@ -170,3 +170,7 @@ body {
     font-size: 16px;
   }
 }
+
+.call-widget-wrapper2 .call-widget-btn2 {
+  left: -37% !important;
+}
