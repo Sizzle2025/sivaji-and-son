@@ -10352,17 +10352,7 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
   position: relative;
   margin-left: 10px;
 }
-@keyframes shake {
-  0% { transform: translateY(0); }
-  25% { transform: translateY(-5px); }
-  50% { transform: translateY(5px); }
-  75% { transform: translateY(-5px); }
-  100% { transform: translateY(0); }
-}
 
-.side-call {
-  animation: shake 0.9s ease-in-out infinite;
-}
 
 .call-widget-wrapper .call-widget-btn .arrow::after {
   border-top: 3px solid #19232d;
