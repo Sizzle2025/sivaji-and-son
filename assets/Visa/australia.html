@@ -63,90 +63,6 @@
 
 </head>
 <body>
-<!-- 
-    <header class="header-section header-section-one header-two">
-            <div class="header">
-                <div class="header-bottom-area">
-                    <div class="container-fluid">
-                        <div class="header-menu-content">
-                            <nav class="navbar navbar-expand-lg p-0">
-                                <a class="site-logo site-title" href="index.html"><img src="assets/images/logo.png"
-                                        alt="site-logo"></a>
-                                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
-                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="fas fa-bars"></span>
-                                </button>
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul class="navbar-nav main-menu ml-auto">
-                                        <li class="menu_has_children"><a href="#0">Home</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="index.html">Home One</a></li>
-                                                <li><a href="index-two.html">Home Two</a></li>
-                                                <li><a href="index-dark.html">Home Dark</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li class="menu_has_children"><a href="#0">Pages</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="service.html">Service</a></li>
-                                                <li><a href="service-details.html">Service Details</a></li>
-                                                <li><a href="deals.html">Deals</a></li>
-                                                <li><a href="deals-details.html">Deals Details</a></li>
-                                                <li><a href="package.html">Package</a></li>
-                                                <li><a href="package-details.html">Package Details</a></li>
-                                                <li><a href="course.html">Our Course</a></li>
-                                                <li><a href="course-details.html">Course Details</a></li>
-                                                <li><a href="team.html">Our Team</a></li>
-                                                <li><a href="team-details.html">Team Details</a></li>
-                                                <li><a href="faq.html">FAQ</a></li>
-                                                <li><a href="register.html">Sign Up</a></li>
-                                                <li><a href="login.html">Sign In</a></li>
-                                                <li><a href="404.html">404 Page</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu_has_children"><a href="#0">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog-classic.html">Blog Classic</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="faq.html">Faq</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                    </ul>
-                                    <div class="header-right">
-                                        <div class="search-bar d-none d-lg-block">
-                                            <a href="#0"><i class="fas fa-search"></i></a>
-                                            <div class="header-top-search-area">
-                                                <form class="header-search-form"
-                                                    action="https://gamblingscript.com/search" method="GET">
-                                                    <input type="search" name="keyword" id="header_search"
-                                                        placeholder="Search Product...">
-                                                    <button class="header-search-btn"><i
-                                                            class="fas fa-search"></i></button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <div class="header-action-area">
-                                            <a href="service-details.html" class="action-btn two"><i
-                                                    class="icon-btn-icon"></i></a>
-                                            <div class="header-action">
-                                                <a href="service-details.html" class="btn--base"><i
-                                                        class="icon-btn-icon"></i> Book Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header> -->
-
-
-        
 
     <div class="welcome-banner text-white d-flex align-items-center mb-3">
   <div class="container py-5">
@@ -180,64 +96,59 @@
   <span class="arrow"></span>
 </label>
 
-
   <div class="call-widget-form-area">
-    <form class="book-form">
+    <!-- ✅ Only one form -->
+    <form id="apply-form" class="book-form">
       <div class="contact-form-inner">
-<div class="apply-box">
-  <div class="apply-header">
-    <span class="apply-note"><i class="las la-clock"></i> It takes less than <strong>2 minutes</strong> to Apply</span>
-  </div>
+        <div class="apply-box">
+          <div class="apply-header">
+            <span class="apply-note">
+              <i class="las la-clock"></i> It takes less than <strong>2 minutes</strong> to Apply
+            </span>
+          </div>
 
-  <div class="apply-form">
-    <h3 class="apply-title">Apply Online <span class="toggle-icon">−</span></h3>
+          <div class="apply-form">
+            <h3 class="apply-title">Apply Online <span class="toggle-icon">−</span></h3>
 
-    <form>
-      <input type="email" class="apply-input" placeholder="Email ID" required>
-      <input type="tel" class="apply-input" placeholder="Contact No" required>
+            <input type="email" id="email" class="apply-input" placeholder="Email ID" required />
+            <input type="tel" id="contact" class="apply-input" placeholder="Contact No" required />
 
-      <select class="apply-select" style="padding: 13px;" required>
-         <option value="1" >Visa</option>
-                      <option value="2">Flight Ticket</option>
-                      <option value="3">Travel Insurance</option>
-                      <option value="4">Cruise Package</option>
-      </select>
+            <select id="service" class="apply-select" style="padding: 13px;" required>
+              <option value="Visa">Visa</option>
+              <option value="Flight Ticket">Flight Ticket</option>
+              <option value="Travel Insurance">Travel Insurance</option>
+              <option value="Cruise Package">Cruise Package</option>
+            </select>
 
+            <button type="submit" class="apply-button">Apply Now</button>
+          </div>
 
-      
+          <div class="contact-boxes">
+            <div class="contact-box whatsapp">
+              <i class="lab la-whatsapp"></i>
+              <div>
+                <div class="title">WhatsApp</div>
+                <div class="detail">+91 9655150814</div>
+              </div>
+            </div>
 
-      <button type="submit" class="apply-button">Apply Now</button>
-    </form>
-  </div>
+            <div class="contact-box phone">
+              <i class="las la-phone-volume"></i>
+              <div>
+                <div class="title">Call us on</div>
+                <div class="detail">9655150814</div>
+              </div>
+            </div>
 
-  <div class="contact-boxes">
-    <div class="contact-box whatsapp">
-      <i class="lab la-whatsapp"></i>
-      <div>
-        <div class="title">WhatsApp</div>
-        <div class="detail">+91 9655150814</div>
-      </div>
-    </div>
-
-    <div class="contact-box phone">
-      <i class="las la-phone-volume"></i>
-      <div>
-        <div class="title">Call us on</div>
-        <div class="detail">+91 9655150814</div>
-      </div>
-    </div>
-
-    <div class="contact-box time">
-      <i class="las la-clock"></i>
-      <div>
-        <div class="title">Timing</div>
-        <div class="detail">9am to 7pm</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+            <div class="contact-box time">
+              <i class="las la-clock"></i>
+              <div>
+                <div class="title">Timing</div>
+                <div class="detail">9am to 7pm</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </form>
   </div>
@@ -335,58 +246,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="footer-bottom-area">
-                    <div class="row mb-30-none">
-                        <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
-                            <div class="footer-widget">
-                                <h4 class="title">Get started</h4>
-                                <ul class="footer-list">
-                                    <li><a href="#0">Visa Services</a></li>
-                                    <li><a href="#0">Travel Packages</a></li>
-                                    <li><a href="#0">Register</a></li>
-                                    <li><a href="#0">Current Offers</a></li>
-                                    <li><a href="#0">Mobile App</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
-                            <div class="footer-widget">
-                                <h4 class="title">How it works</h4>
-                                <ul class="footer-list">
-                                    <li><a href="#0">How it works</a></li>
-                                    <li><a href="#0">Ways to apply for Visa</a></li>
-                                    <li><a href="#0">Ways to book travel</a></li>
-                                    <li><a href="#0">Private Tours & Packages</a></li>
-                                    <li><a href="#0">Visa & Travel Costs</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-6 mb-30">
-                            <div class="footer-widget">
-                                <h4 class="title">About us</h4>
-                                <ul class="footer-list">
-                                    <li><a href="#0">About us</a></li>
-                                    <li><a href="#0">News & press</a></li>
-                                    <li><a href="#0">Blog</a></li>
-                                    <li><a href="#0">FAQs</a></li>
-                                    <li><a href="#0">Careers</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                            <div class="footer-widget">
-                                <h4 class="title">Newsletter</h4>
-                                <p>SivajiSon was founded in 2008 by a team of experienced travel and visa consultants dedicated to delivering seamless travel solutions.</p>
-                                <form class="subscribe-form">
-                                    <label class="subscribe-icon"><i class="las la-envelope"></i></label>
-                                    <input type="email" class="form--control" placeholder="Enter Email">
-                                    <button type="submit" class="btn--base">Subscribe Us <i
-                                            class="icon-btn-icon ml-1"></i></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
                 <div class="copyright-area">
                     <div class="social-area">
                         <ul class="footer-social">

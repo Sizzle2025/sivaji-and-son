@@ -270,61 +270,59 @@
   <span class="arrow"></span>
 </label>
 
-
   <div class="call-widget-form-area">
-    <form class="book-form">
+    <!-- ✅ Only one form -->
+    <form id="apply-form" class="book-form">
       <div class="contact-form-inner">
-<div class="apply-box">
-  <div class="apply-header">
-    <span class="apply-note"><i class="las la-clock"></i> It takes less than <strong>2 minutes</strong> to Apply</span>
-  </div>
+        <div class="apply-box">
+          <div class="apply-header">
+            <span class="apply-note">
+              <i class="las la-clock"></i> It takes less than <strong>2 minutes</strong> to Apply
+            </span>
+          </div>
 
-  <div class="apply-form">
-    <h3 class="apply-title">Apply Online <span class="toggle-icon">−</span></h3>
+          <div class="apply-form">
+            <h3 class="apply-title">Apply Online <span class="toggle-icon">−</span></h3>
 
-    <form>
-      <input type="email" class="apply-input" placeholder="Email ID" required>
-      <input type="tel" class="apply-input" placeholder="Contact No" required>
+            <input type="email" id="email" class="apply-input" placeholder="Email ID" required />
+            <input type="tel" id="contact" class="apply-input" placeholder="Contact No" required />
 
-      <select class="apply-select" style="padding: 13px;" required>
-         <option value="1" >Visa</option>
-                      <option value="2">Flight Ticket</option>
-                      <option value="3">Travel Insurance</option>
-                      <option value="4">Cruise Package</option>
-      </select>
+            <select id="service" class="apply-select" style="padding: 13px;" required>
+              <option value="Visa">Visa</option>
+              <option value="Flight Ticket">Flight Ticket</option>
+              <option value="Travel Insurance">Travel Insurance</option>
+              <option value="Cruise Package">Cruise Package</option>
+            </select>
 
-      <button type="submit" class="apply-button">Apply Now</button>
-    </form>
-  </div>
+            <button type="submit" class="apply-button">Apply Now</button>
+          </div>
 
-  <div class="contact-boxes">
-    <div class="contact-box whatsapp">
-      <i class="lab la-whatsapp"></i>
-      <div>
-        <div class="title">WhatsApp</div>
-        <div class="detail">+91 9655150814</div>
-      </div>
-    </div>
+          <div class="contact-boxes">
+            <div class="contact-box whatsapp">
+              <i class="lab la-whatsapp"></i>
+              <div>
+                <div class="title">WhatsApp</div>
+                <div class="detail">+91 9655150814</div>
+              </div>
+            </div>
 
-    <div class="contact-box phone">
-      <i class="las la-phone-volume"></i>
-      <div>
-        <div class="title">Call us on</div>
-        <div class="detail">+91 9655150814</div>
-      </div>
-    </div>
+            <div class="contact-box phone">
+              <i class="las la-phone-volume"></i>
+              <div>
+                <div class="title">Call us on</div>
+                <div class="detail">9655150814</div>
+              </div>
+            </div>
 
-    <div class="contact-box time">
-      <i class="las la-clock"></i>
-      <div>
-        <div class="title">Timing</div>
-        <div class="detail">9am to 7pm</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+            <div class="contact-box time">
+              <i class="las la-clock"></i>
+              <div>
+                <div class="title">Timing</div>
+                <div class="detail">9am to 7pm</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </form>
   </div>

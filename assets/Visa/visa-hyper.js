@@ -15,4 +15,4 @@ document.querySelectorAll('.accordion-header').forEach(header => {
     window.addEventListener('DOMContentLoaded', () => {
       const firstAccordion = document.querySelector('.accordion');
       firstAccordion.classList.add('open');
-    });
+    });  
