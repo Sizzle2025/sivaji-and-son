@@ -104,12 +104,12 @@
                                               style="background-color: transparent;box-shadow:0px 0px 2px whitesmoke;padding: 8px 20px;text-align: center;border-radius: 50px;color:white;font-weight: 500;display: inline-block;margin-top: 8px;"><i class="fab fa-amazon-pay" ></i></a>
                                         </li>
                                         <li class="menu_has_children">
-                                            <a href="#0" class="online-visa-btn " 
-                                              style="background-color: #3DBA57;padding: 8px 20px;text-align: center;border-radius: 50px;color:black;font-weight: 500;display: inline-block;margin-top: 8px;"><i
+                                            <a href="#0" class="online-visa-btn" 
+                                              style="background-color: transparent;padding: 8px 20px;text-align: center;border-radius: 50px;color:white;border:#3dba56b3 1px solid;font-weight: 500;display: inline-block;margin-top: 8px;"><i
                                                         class="icon-btn-icon"></i>Online Visa</a>
                                             <ul class="sub-menu">
-                                              <li><a href="./assets/Visa/Uk-visa-application.html">UK Visa</a></li>
                                               <li><a href="./assets/Visa/Us-visa-application.html">US Visa</a></li>
+                                              <li><a href="./assets/Visa/Uk-visa-application.html">UK Visa</a></li>
                                             </ul>
                                         </li>
 
@@ -167,63 +167,63 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div class="call-widget-wrapper1 call-widget-wrapper">
   <button type="button" class="call-widget-btn1 call-widget-btn">
-    <span ><i class="icon-call-icon side-call" ></i>Talk To Us</span>
+    <span><i class="icon-call-icon side-call"></i>Talk To Us</span>
     <span class="arrow"></span>
   </button>
 
   <div class="call-widget-form-area">
-    <form class="book-form">
+    <!-- ✅ Only one form -->
+    <form id="apply-form" class="book-form">
       <div class="contact-form-inner">
-<div class="apply-box">
-  <div class="apply-header">
-    <span class="apply-note"><i class="las la-clock"></i> It takes less than <strong>2 minutes</strong> to Apply</span>
-  </div>
+        <div class="apply-box">
+          <div class="apply-header">
+            <span class="apply-note">
+              <i class="las la-clock"></i> It takes less than <strong>2 minutes</strong> to Apply
+            </span>
+          </div>
 
-  <div class="apply-form">
-    <h3 class="apply-title">Apply Online <span class="toggle-icon">−</span></h3>
+          <div class="apply-form">
+            <h3 class="apply-title">Apply Online <span class="toggle-icon">−</span></h3>
 
-    <form>
-      <input type="email" class="apply-input" placeholder="Email ID" required>
-      <input type="tel" class="apply-input" placeholder="Contact No" required>
+            <input type="email" id="email" class="apply-input" placeholder="Email ID" required />
+            <input type="tel" id="contact" class="apply-input" placeholder="Contact No" required />
 
-      <select class="apply-select" required>
-         <option value="1" >Visa</option>
-                      <option value="2">Flight Ticket</option>
-                      <option value="3">Travel Insurance</option>
-                      <option value="4">Cruise Package</option>
-      </select>
-      <button type="submit" class="apply-button">Apply Now</button>
-    </form>
-  </div>
+            <select id="service" class="apply-select" required>
+              <option value="Visa">Visa</option>
+              <option value="Flight Ticket">Flight Ticket</option>
+              <option value="Travel Insurance">Travel Insurance</option>
+              <option value="Cruise Package">Cruise Package</option>
+            </select>
 
-  <div class="contact-boxes">
-    <div class="contact-box whatsapp">
-      <i class="lab la-whatsapp"></i>
-      <div>
-        <div class="title">WhatsApp</div>
-        <div class="detail">+91 9655150814</div>
-      </div>
-    </div>
+            <button type="submit" class="apply-button">Apply Now</button>
+          </div>
 
-    <div class="contact-box phone">
-      <i class="las la-phone-volume"></i>
-      <div>
-        <div class="title">Call us on</div>
-        <div class="detail">9655150814</div>
-      </div>
-    </div>
+          <div class="contact-boxes">
+            <div class="contact-box whatsapp">
+              <i class="lab la-whatsapp"></i>
+              <div>
+                <div class="title">WhatsApp</div>
+                <div class="detail">+91 9655150814</div>
+              </div>
+            </div>
 
-    <div class="contact-box time">
-      <i class="las la-clock"></i>
-      <div>
-        <div class="title">Timing</div>
-        <div class="detail">9am to 7pm</div>
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="contact-box phone">
+              <i class="las la-phone-volume"></i>
+              <div>
+                <div class="title">Call us on</div>
+                <div class="detail">9655150814</div>
+              </div>
+            </div>
 
-
+            <div class="contact-box time">
+              <i class="las la-clock"></i>
+              <div>
+                <div class="title">Timing</div>
+                <div class="detail">9am to 7pm</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </form>
   </div>
@@ -672,10 +672,40 @@
     <script src="assets/js/main.js"></script>
     <!-- popup -->
     <script src="assets/js/popup.js"></script>
+   
+ <!-- ✅ Working EmailJS SDK from their official CDN (non-module UMD version) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    // ✅ Initialize EmailJS
+    emailjs.init("WpYyLZ4D0D0mon2d6"); // Replace with your actual public key
+
+    document.getElementById("apply-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const contact = document.getElementById("contact").value;
+      const service = document.getElementById("service").value;
+
+      const templateParams = {
+        user_email: email,
+        user_contact: contact,
+        user_service: service
+      };
+
+      emailjs.send("service_cuah7yr", "template_s2fufry", templateParams)
+        .then(function(response) {
+          alert("✅ Application sent successfully!");
+          document.getElementById("apply-form").reset();
+        }, function(error) {
+          console.error("❌ EmailJS Error:", error);
+          alert("❌ Failed to send email. See console for details.");
+        });
+    });
+  </script>
+
 
 
 </body>
 
 
-<!-- Mirrored from themeim.com/demo/flynext/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 May 2025 08:55:23 GMT -->
 </html>

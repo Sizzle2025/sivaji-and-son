@@ -270,7 +270,7 @@
                         <div class="col-xl-4 col-lg-3 col-md-6 mb-30">
                             <div class="footer-widget">
                                 <div class="footer-logo">
-                                    <a class="site-logo site-title" href="index.html"><img src="assets/images/sivajison_logo.png"
+                                    <a class="site-logo site-title" href="index.html"><img src="../images/sivajison_logo.png"
                                             alt="site-logo"></a>
                                 </div>
                                 <p>Established in 2016, Sivaji Son Tours and Travels Pvt Ltd began with a vision to revolutionize the travel industry through reliable, affordable, and tech-enabled solutions.</p>
@@ -401,6 +401,37 @@
     <script src="assets/js/jquery.nice-select.js"></script>
     <!-- main -->
     <script src="assets/js/main.js"></script>
-    <script src="./visa-hyper.js"></script>
+    <!-- visa-doccument -->
+     <script src="./visa-hyper.js"></script>
+     
+ <!-- ✅ Working EmailJS SDK from their official CDN (non-module UMD version) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    // ✅ Initialize EmailJS
+    emailjs.init("WpYyLZ4D0D0mon2d6"); // Replace with your actual public key
+
+    document.getElementById("apply-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const contact = document.getElementById("contact").value;
+      const service = document.getElementById("service").value;
+
+      const templateParams = {
+        user_email: email,
+        user_contact: contact,
+        user_service: service
+      };
+
+      emailjs.send("service_cuah7yr", "template_s2fufry", templateParams)
+        .then(function(response) {
+          alert("✅ Application sent successfully!");
+          document.getElementById("apply-form").reset();
+        }, function(error) {
+          console.error("❌ EmailJS Error:", error);
+          alert("❌ Failed to send email. See console for details.");
+        });
+    });
+  </script>
 </body>
 </html>

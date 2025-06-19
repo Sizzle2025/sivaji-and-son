@@ -10313,12 +10313,12 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
 }
 
 .call-widget-wrapper1 .call-widget-btn1 {
-  left: -33% !important;
+  left: -37% !important;
 }
 .call-widget-wrapper .call-widget-btn {
   position: absolute;
   top: 42%;
-  left: -142px;
+  left: -160px;
   background-color: #FFF8EE;
   transform: rotate(-90deg);
   color: #19232d;
