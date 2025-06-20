@@ -3568,7 +3568,7 @@ section {
 .banner-section {
   position: relative;
   padding-top: 295px;
-  padding-bottom: 235px;
+  padding-bottom: 65px;
   padding-left: 200px;
   padding-right: 200px;
   background-color: #19232d;
@@ -3610,6 +3610,8 @@ section {
 .banner-section .banner-thumb img {
   animation: ImgAnimate 3s infinite cubic-bezier(0.4, 0, 1, 1) 0.2s;
   width: 100%;
+  position: relative;
+  top: -50px;
 }
 @media only screen and (max-width: 1199px) {
   .banner-section .banner-thumb {
@@ -10216,7 +10218,7 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
 .make-easy{
   max-height: 550px;
   position: relative;
-  top: -50px;
+  top: -110px;
   left: -50px;
   animation: moveLeftRight 4s infinite ease-in-out;
 }
