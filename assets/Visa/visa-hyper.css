@@ -189,3 +189,7 @@ body {
 #toggleForm:checked ~ .call-widget-wrapper2 {
   transform: translateY(-50%) translateX(0px);
 }
+
+#toggleForm:checked ~ .call-widget-wrapper .call-widget-btn .arrow {
+    transform: rotate(180deg);
+}

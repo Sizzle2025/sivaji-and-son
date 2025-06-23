@@ -2550,6 +2550,7 @@ option {
 
 section {
   overflow: hidden;
+  background-color: #f5f3f1;
 }
 
 ::selection {
@@ -6085,7 +6086,7 @@ font-size: 18px;
 .feature-item {
   background-color: white;
   padding: 40px;
-  border-radius: 5px;
+  border-radius: 15px;
   border: 2px solid rgba(220, 187, 135, 0.1);
   transition: all 0.5s;
   height: 240px;
@@ -10145,53 +10146,161 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
   animation: iconShake 0.3s ease;
 }
 
-.more-visa-btn{
-  background-color: white;
+.more-visa-btn {
+  background-color: transparent; /* or use white if needed */
   border: none;
+  color: #3DBA57;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 1rem;
+  animation: blinkTextGreen 1s infinite;
 }
+
+/* Blinking text animation */
+@keyframes blinkTextGreen {
+  0%, 100% {
+    color: #3DBA57; /* Green */
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
 .more-visa-btn:hover{
   color: green !important;
   border: 0px !important;
 }
-
-.feature-item {
-  position: relative;
-  overflow: hidden;
-  min-height: 200px; /* Adjust as needed */
-  background-color: #fff;
+.features-wrapper {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.feature-item-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0); /* Transparent by default */
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: 1;
+.features-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.features-header .subtitle {
+  color: #3DBA57;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.features-header h2 {
+  color: rgb(0, 80, 0);
+  font-size: 2rem;
+  margin: 0;
+}
+
+.features-grid {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
 }
 
-.feature-icon-overlay {
-  max-width: 100%;
-  max-height: 100%;
-  opacity: 0.2; /* Reduce visibility */
-  transition: transform 0.4s ease;
+.feature-box {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  height: 260px;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background 0.4s ease;
 }
 
-/* Content stays centered */
+.feature-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.feature-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Show overlay on hover */
+.feature-box:hover .feature-overlay {
+  opacity: 0.6;
+}
+
 .feature-content {
   position: relative;
   z-index: 2;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  transition: color 0.4s ease, filter 0.4s ease;
 }
 
-/* Show overlay image on hover */
-.feature-item:hover .feature-item-overlay {
-  opacity: 1;
+.feature-icon {
+  width: 60px;
+  height: auto;
+  margin-bottom: 15px;
+  filter: brightness(1);
+  transition: filter 0.4s ease;
+}
+
+.feature-text {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.4;
+  transition: color 0.4s ease;
+}
+
+/* Brighten icon & make text white on hover */
+.feature-box:hover {
+  transform: scale(1.02);
+  transition: all 1s ;
+  box-shadow: 0px 0px 5px #3dba87;
+}
+
+.feature-box:hover .feature-icon {
+  filter: brightness(1.8);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .feature-box {
+    height: 220px;
+  }
+
+  .feature-text {
+    font-size: 0.95rem;
+  }
+
+  .feature-icon {
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-box {
+    height: 200px;
+  }
+
+  .feature-text {
+    font-size: 0.9rem;
+  }
 }
 
 .contact-widget .contact-item-list li .contact-item-icon:hover {
@@ -10446,7 +10555,7 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
   width: 100%;
   /* padding: 12px 15px; */
   font-size: 16px;
-  border: 1px solid #3dba87;
+  border: 1px solid #3dba57;
   border-radius: 6px;
   outline: none;
   margin-bottom: 10px;
@@ -10462,7 +10571,7 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
 }
 
 .apply-button {
-  background-color: #3dba87;
+  background-color: #3dba57;
   color: #fff;
   padding: 12px 25px;
   border: none;
@@ -10493,7 +10602,7 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
 
 .contact-box i {
   font-size: 24px;
-  color: #3dba87;
+  color: #3dba57;
 }
 
 .title {
@@ -10528,4 +10637,9 @@ div[class*="col"]:nth-of-type(4n + 4) .statistics-item::after {
   50%  { transform: translateX(5px); }
   75%  { transform: translateX(-5px); }
   100% { transform: translateX(0); }
+}
+
+.client-logo:hover{
+  transform: scale(1.05);
+  transition: all 1s;
 }
