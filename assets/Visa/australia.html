@@ -59,6 +59,13 @@
   border-radius: 10px;
   transition: 0.3s ease;
 }
+@keyframes side-shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-5px); }
+  50%  { transform: translateX(5px); }
+  75%  { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
     </style>
 
 </head>
@@ -91,8 +98,14 @@
       
     <input type="checkbox" id="toggleForm" hidden />
 <div class="call-widget-wrapper2 call-widget-wrapper">
-  <label for="toggleForm" class="call-widget-btn2 call-widget-btn">
-  <span><i class="icon-call-icon side-call"></i>Feed your query</span>
+    <label for="toggleForm" class="call-widget-btn2 call-widget-btn"
+  onmouseover="this.querySelector('.side-call').style.color='red'; this.querySelector('.side-call').style.animation='side-shake 0.6s ease-in-out';"
+  onmouseout="this.querySelector('.side-call').style.color=''; this.querySelector('.side-call').style.animation='';"
+>
+  <span>
+    <i class="icon-call-icon side-call" style="display:inline-block;"></i>
+    Feed your query
+  </span> 
   <span class="arrow"></span>
 </label>
 

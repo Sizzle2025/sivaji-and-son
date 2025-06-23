@@ -39,6 +39,16 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!-- main style css link -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+@keyframes side-shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-5px); }
+  50%  { transform: translateX(5px); }
+  75%  { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+</style>
 </head>
 
 <body>
@@ -166,10 +176,18 @@
         End Scroll-To-Top
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div class="call-widget-wrapper1 call-widget-wrapper">
-  <button type="button" class="call-widget-btn1 call-widget-btn">
-    <span><i class="icon-call-icon side-call"></i>Talk To Us</span>
-    <span class="arrow"></span>
-  </button>
+  <button type="button" class="call-widget-btn1 call-widget-btn" 
+  onmouseover="this.querySelector('.side-call').style.color='red'; this.querySelector('.side-call').style.animation='side-shake 0.6s ease-in-out';"
+  onmouseout="this.querySelector('.side-call').style.color=''; this.querySelector('.side-call').style.animation='';"
+>
+  <span>
+    <i class="icon-call-icon side-call" 
+      style="display:inline-block;">
+    </i>
+    Talk To Us
+  </span> 
+  <span class="arrow"></span>
+</button>
 
   <div class="call-widget-form-area">
     <!-- ✅ Only one form -->
