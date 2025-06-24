@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <title>UK Visa Application Form</title>
     <link rel="stylesheet" href="./application.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            /* padding: 20px; */
             color: #333;
         }
         .form-section {
@@ -124,8 +125,16 @@
         End Preloader
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
+        <section class="visa-banner">
+  <div class="visa-banner-content">
+    <h1>Welcome to the UK Visa Application Portal</h1>
+    <p>Begin your journey to the United Kingdom. Fast, secure, and hassle-free visa application experience.</p>
+  </div>
+</section>
+
+
   <h1>UK Visa Application Form</h1>
-  <form action="#" method="post">
+  <form action="/api/apply" method="post" id="visa-form">
 
     <div class="form-section">
       <div class="section-title">Passport / Travel Document</div>
@@ -199,7 +208,7 @@
 
   <div class="form-group">
     <label>Address Line 1:</label>
-    <input type="text" name="uk_address_line1" required>
+    <input type="text" name="uk_address_line1"  >
   </div>
 
   <div class="form-group">
@@ -209,12 +218,12 @@
 
   <div class="form-group">
     <label>Postcode:</label>
-    <input type="text" name="uk_postcode" required>
+    <input type="text" name="uk_postcode"  >
   </div>
 
   <div class="form-group">
     <label>Primary Contact No:</label>
-    <input type="tel" name="uk_contact1" required>
+    <input type="tel" name="uk_contact1"  >
   </div>
 
   <div class="form-group">
@@ -224,7 +233,7 @@
 
   <div class="form-group">
     <label>Email ID:</label>
-    <input type="email" name="uk_email" required>
+    <input type="email" name="uk_email"  >
   </div>
 </div>
 
@@ -235,7 +244,7 @@
 
   <div class="form-group">
     <label>Permanent Residential Address - Line 1:</label>
-    <input type="text" name="perm_address_line1" required>
+    <input type="text" name="perm_address_line1"  >
   </div>
 
   <div class="form-group">
@@ -255,17 +264,17 @@
 
   <div class="form-group">
     <label>Postal Code:</label>
-    <input type="text" name="perm_postal_code" required>
+    <input type="text" name="perm_postal_code"  >
   </div>
 
   <div class="form-group">
     <label>Country:</label>
-    <input type="text" name="perm_country" required>
+    <input type="text" name="perm_country"  >
   </div>
 
   <div class="form-group">
     <label>Primary Contact No:</label>
-    <input type="tel" name="perm_contact_primary" required>
+    <input type="tel" name="perm_contact_primary"  >
   </div>
 
   <div class="form-group">
@@ -275,18 +284,18 @@
 
   <div class="form-group">
     <label>Email ID:</label>
-    <input type="email" name="perm_email" required>
+    <input type="email" name="perm_email"  >
   </div>
 
   <div class="form-group">
     <label>How long have you lived at this address?</label>
-    <input type="text" name="perm_duration_at_address" required>
+    <input type="text" name="perm_duration_at_address"  >
   </div>
 
   <!-- Optional alternative contact section -->
   <div class="form-group">
   <label>Do you prefer using other contact details?</label>
-  <select name="prefer_other_contact" id="prefer_other_contact" required>
+  <select name="prefer_other_contact" id="prefer_other_contact"  >
     <option value="">Select</option>
     <option value="yes">Yes</option>
     <option value="no">No</option>
@@ -297,7 +306,7 @@
 <div class="sub-section" id="alt-contact-section" style="display: none;">
   <div class="form-group">
     <label>Alternative Address - Line 1:</label>
-    <input type="text" name="alt_address_line1" class="alt-required">
+    <input type="text" name="alt_address_line1" class="alt- ">
   </div>
   <div class="form-group">
     <label>Alternative Address - Line 2:</label>
@@ -313,15 +322,15 @@
   </div>
   <div class="form-group">
     <label>Postal Code:</label>
-    <input type="text" name="alt_postal_code" class="alt-required">
+    <input type="text" name="alt_postal_code" class="alt- ">
   </div>
   <div class="form-group">
     <label>Country:</label>
-    <input type="text" name="alt_country" class="alt-required">
+    <input type="text" name="alt_country" class="alt- ">
   </div>
   <div class="form-group">
     <label>Primary Contact No:</label>
-    <input type="tel" name="alt_contact_primary" class="alt-required">
+    <input type="tel" name="alt_contact_primary" class="alt- ">
   </div>
   <div class="form-group">
     <label>Secondary Contact No:</label>
@@ -329,7 +338,7 @@
   </div>
   <div class="form-group">
     <label>Email ID:</label>
-    <input type="email" name="alt_email" class="alt-required">
+    <input type="email" name="alt_email" class="alt- ">
   </div>
 </div>
 
@@ -342,7 +351,7 @@
 
   <div class="form-group">
     <label>Have you been issued any UK or Commonwealth visa in the last 10 years?</label>
-    <select name="visa_issued_last_10_years" required>
+    <select name="visa_issued_last_10_years"  >
       <option value="">Select</option>
       <option>Yes</option>
       <option>No</option>
@@ -370,7 +379,7 @@
 
   <div class="form-group">
     <label>Have you travelled to the UK in the last 10 years?</label>
-    <select name="uk_travel_last_10_years" required>
+    <select name="uk_travel_last_10_years"  >
       <option value="">Select</option>
       <option>Yes</option>
       <option>No</option>
@@ -394,7 +403,7 @@
 
   <div class="form-group">
     <label>Have you applied to the Home Office to remain in the UK in the last 10 years?</label>
-    <select name="home_office_application" required>
+    <select name="home_office_application"  >
       <option value="">Select</option>
       <option>Yes</option>
       <option>No</option>
@@ -418,7 +427,7 @@
 
   <div class="form-group">
     <label>Have you ever been refused entry to the UK?</label>
-    <select name="refused_entry_uk" required>
+    <select name="refused_entry_uk"  >
       <option value="">Select</option>
       <option>Yes</option>
       <option>No</option>
@@ -446,7 +455,7 @@
 
   <div class="form-group">
     <label>Have you been refused a visa for any country?</label>
-    <select name="refused_visa_any_country" required>
+    <select name="refused_visa_any_country"  >
       <option value="">Select</option>
       <option>Yes</option>
       <option>No</option>
@@ -474,7 +483,7 @@
 
   <div class="form-group">
     <label>Have you travelled outside your country of residence (excluding the UK) in the last 10 years?</label>
-    <select name="other_country_travel" required>
+    <select name="other_country_travel"  >
       <option value="">Select</option>
       <option>Yes</option>
       <option>No</option>
@@ -503,7 +512,7 @@
 
   <div class="form-group">
     <label>If we need to interview you, what language would you prefer?</label>
-    <input type="text" name="interview_language" required>
+    <input type="text" name="interview_language"  >
   </div>
 </div>
 
@@ -514,7 +523,7 @@
 
   <div class="form-group">
     <label>What is your marital status?</label>
-    <select name="marital_status" required>
+    <select name="marital_status"  >
       <option value="">Select</option>
       <option>Single</option>
       <option>Married</option>
@@ -527,7 +536,7 @@
 
   <div class="form-group">
     <label>Will your spouse/partner be travelling with you?</label>
-    <select name="spouse_travelling_with_you" required>
+    <select name="spouse_travelling_with_you"  >
       <option value="">Select</option>
       <option>Yes</option>
       <option>No</option>
@@ -561,7 +570,7 @@
 
   <div class="form-group">
     <label>Does your spouse/partner currently live with you?</label>
-    <select name="spouse_lives_with_you" required>
+    <select name="spouse_lives_with_you"  >
       <option value="">Select</option>
       <option>Yes</option>
       <option>No</option>
@@ -576,17 +585,17 @@
 
   <div class="form-group">
     <label>Father's Nationality:</label>
-    <input type="text" name="father_nationality" required>
+    <input type="text" name="father_nationality"  >
   </div>
 
   <div class="form-group">
     <label>Father's Family Name / Surname:</label>
-    <input type="text" name="father_family_name" required>
+    <input type="text" name="father_family_name"  >
   </div>
 
   <div class="form-group">
     <label>Father's Given Name(s) / Forename(s):</label>
-    <input type="text" name="father_given_name" required>
+    <input type="text" name="father_given_name"  >
   </div>
 
   <div class="form-group">
@@ -607,17 +616,17 @@
 
   <div class="form-group">
     <label>Mother's Nationality:</label>
-    <input type="text" name="mother_nationality" required>
+    <input type="text" name="mother_nationality"  >
   </div>
 
   <div class="form-group">
     <label>Mother's Family Name / Surname:</label>
-    <input type="text" name="mother_family_name" required>
+    <input type="text" name="mother_family_name"  >
   </div>
 
   <div class="form-group">
     <label>Mother's Given Name(s) / Forename(s):</label>
-    <input type="text" name="mother_given_name" required>
+    <input type="text" name="mother_given_name"  >
   </div>
 
   <div class="form-group">
@@ -638,7 +647,7 @@
 
   <div class="form-group">
     <label>Do you have Dependent Children?</label>
-    <select name="has_dependent_children" required>
+    <select name="has_dependent_children"  >
       <option value="">Select</option>
       <option>Yes</option>
       <option>No</option>
@@ -648,37 +657,37 @@
   <div class="sub-section">
     <div class="form-group">
       <label>Child's Passport/Travel Document Number:</label>
-      <input type="text" name="dependent_child_passport" required>
+      <input type="text" name="dependent_child_passport"  >
     </div>
 
     <div class="form-group">
       <label>Child's Nationality:</label>
-      <input type="text" name="dependent_child_nationality" required>
+      <input type="text" name="dependent_child_nationality"  >
     </div>
 
     <div class="form-group">
       <label>Child's Family Name / Surname:</label>
-      <input type="text" name="dependent_child_family_name" required>
+      <input type="text" name="dependent_child_family_name"  >
     </div>
 
     <div class="form-group">
       <label>Child's Given Name(s) / Forename(s):</label>
-      <input type="text" name="dependent_child_given_name" required>
+      <input type="text" name="dependent_child_given_name"  >
     </div>
 
     <div class="form-group">
       <label>Child's Date of Birth:</label>
-      <input type="date" name="dependent_child_dob" required>
+      <input type="date" name="dependent_child_dob"  >
     </div>
 
     <div class="form-group">
       <label>Child's Place of Birth:</label>
-      <input type="text" name="dependent_child_birthplace" required>
+      <input type="text" name="dependent_child_birthplace"  >
     </div>
 
     <div class="form-group">
       <label>Is this child travelling with you?</label>
-      <select name="dependent_child_travelling_with_you" required>
+      <select name="dependent_child_travelling_with_you"  >
         <option value="">Select</option>
         <option>Yes</option>
         <option>No</option>
@@ -687,7 +696,7 @@
 
     <div class="form-group">
       <label>Does this child currently live with you?</label>
-      <select name="dependent_child_lives_with_you" required>
+      <select name="dependent_child_lives_with_you"  >
         <option value="">Select</option>
         <option>Yes</option>
         <option>No</option>
@@ -696,7 +705,7 @@
 
     <div class="form-group">
       <label>Address Line 1:</label>
-      <input type="text" name="dependent_child_address1" required>
+      <input type="text" name="dependent_child_address1"  >
     </div>
     <div class="form-group">
       <label>Address Line 2:</label>
@@ -712,7 +721,7 @@
     </div>
     <div class="form-group">
       <label>Postal Code:</label>
-      <input type="text" name="dependent_child_postal" required>
+      <input type="text" name="dependent_child_postal"  >
     </div>
   </div>
 </div>
@@ -724,7 +733,7 @@
 
   <div class="form-group">
     <label>Are any other children travelling with you?</label>
-    <select name="has_non_dependent_children" required>
+    <select name="has_non_dependent_children"  >
       <option value="">Select</option>
       <option>Yes</option>
       <option>No</option>
@@ -734,47 +743,47 @@
   <div class="sub-section">
     <div class="form-group">
       <label>Child's Passport/Travel Document Number:</label>
-      <input type="text" name="non_dep_child_passport" required>
+      <input type="text" name="non_dep_child_passport"  >
     </div>
 
     <div class="form-group">
       <label>Child's Nationality:</label>
-      <input type="text" name="non_dep_child_nationality" required>
+      <input type="text" name="non_dep_child_nationality"  >
     </div>
 
     <div class="form-group">
       <label>Child's Family Name:</label>
-      <input type="text" name="non_dep_child_family_name" required>
+      <input type="text" name="non_dep_child_family_name"  >
     </div>
 
     <div class="form-group">
       <label>Child's Given Name(s):</label>
-      <input type="text" name="non_dep_child_given_name" required>
+      <input type="text" name="non_dep_child_given_name"  >
     </div>
 
     <div class="form-group">
       <label>Child's Date of Birth:</label>
-      <input type="date" name="non_dep_child_dob" required>
+      <input type="date" name="non_dep_child_dob"  >
     </div>
 
     <div class="form-group">
       <label>Child's Place of Birth:</label>
-      <input type="text" name="non_dep_child_birthplace" required>
+      <input type="text" name="non_dep_child_birthplace"  >
     </div>
 
     <div class="form-group">
       <label>Who does this child live with?</label>
-      <input type="text" name="non_dep_child_living_with" required>
+      <input type="text" name="non_dep_child_living_with"  >
     </div>
 
     <div class="form-group">
       <label>Your relationship to the child:</label>
-      <input type="text" name="non_dep_child_relationship" required>
+      <input type="text" name="non_dep_child_relationship"  >
     </div>
 
     <div class="form-group">
       <label>Your relationship to the child's parent(s):</label>
-      <input type="text" name="non_dep_child_parents_relationship" required>
+      <input type="text" name="non_dep_child_parents_relationship"  >
     </div>
   </div>
 </div>
@@ -787,7 +796,7 @@
   <div class="form-group">
     <label>Have you ever worked for any of the following organisations?</label>
     <small>Armed Forces, Government, Judiciary, Media, Public Administration, Security, etc.</small>
-    <select name="worked_in_restricted_orgs" required>
+    <select name="worked_in_restricted_orgs"  >
       <option value="">Select</option>
       <option>Yes</option>
       <option>No</option>
@@ -797,19 +806,19 @@
   <div class="sub-section">
     <div class="form-group">
       <label>Organisation Name:</label>
-      <input type="text" name="past_org_name" required>
+      <input type="text" name="past_org_name"  >
     </div>
     <div class="form-group">
       <label>Job Description / Title / Rank:</label>
-      <input type="text" name="past_org_title" required>
+      <input type="text" name="past_org_title"  >
     </div>
     <div class="form-group">
       <label>Type of Work Undertaken:</label>
-      <input type="text" name="past_org_work_type" required>
+      <input type="text" name="past_org_work_type"  >
     </div>
     <div class="form-group">
       <label>Start Date:</label>
-      <input type="date" name="past_org_start_date" required>
+      <input type="date" name="past_org_start_date"  >
     </div>
     <div class="form-group">
       <label>End Date (if applicable):</label>
@@ -819,32 +828,32 @@
 
   <div class="form-group">
     <label>What is your current working status?</label>
-    <input type="text" name="current_work_status" required>
+    <input type="text" name="current_work_status"  >
   </div>
 
   <div class="form-group">
     <label>Total Monthly Income from All Employment (after tax):</label>
-    <input type="text" name="monthly_income" required>
+    <input type="text" name="monthly_income"  >
   </div>
 
   <div class="form-group">
     <label>Company/Organisation/Employer Name:</label>
-    <input type="text" name="current_employer_name" required>
+    <input type="text" name="current_employer_name"  >
   </div>
 
   <div class="form-group">
     <label>Job Description / Title / Rank:</label>
-    <input type="text" name="current_job_title" required>
+    <input type="text" name="current_job_title"  >
   </div>
 
   <div class="form-group">
     <label>Type of Work Undertaken:</label>
-    <input type="text" name="current_work_type" required>
+    <input type="text" name="current_work_type"  >
   </div>
 
   <div class="form-group">
     <label>Employer Address - Line 1:</label>
-    <input type="text" name="employer_address1" required>
+    <input type="text" name="employer_address1"  >
   </div>
   <div class="form-group">
     <label>Employer Address - Line 2:</label>
@@ -861,17 +870,17 @@
 
   <div class="form-group">
     <label>Postal Code:</label>
-    <input type="text" name="employer_postal_code" required>
+    <input type="text" name="employer_postal_code"  >
   </div>
 
   <div class="form-group">
     <label>Country:</label>
-    <input type="text" name="employer_country" required>
+    <input type="text" name="employer_country"  >
   </div>
 
   <div class="form-group">
     <label>Primary Contact No:</label>
-    <input type="tel" name="employer_contact1" required>
+    <input type="tel" name="employer_contact1"  >
   </div>
 
   <div class="form-group">
@@ -881,17 +890,17 @@
 
   <div class="form-group">
     <label>Email ID:</label>
-    <input type="email" name="employer_email" required>
+    <input type="email" name="employer_email"  >
   </div>
 
   <div class="form-group">
     <label>When did you start this job?</label>
-    <input type="date" name="current_job_start" required>
+    <input type="date" name="current_job_start"  >
   </div>
 
   <div class="form-group">
     <label>Do you have any additional paid jobs or occupations?</label>
-    <select name="has_additional_jobs" required>
+    <select name="has_additional_jobs"  >
       <option value="">Select</option>
       <option>Yes</option>
       <option>No</option>
@@ -901,19 +910,19 @@
   <div class="sub-section">
     <div class="form-group">
       <label>Organisation:</label>
-      <input type="text" name="additional_job_org" required>
+      <input type="text" name="additional_job_org"  >
     </div>
     <div class="form-group">
       <label>Job Description / Title / Rank:</label>
-      <input type="text" name="additional_job_title" required>
+      <input type="text" name="additional_job_title"  >
     </div>
     <div class="form-group">
       <label>Type of Work Undertaken:</label>
-      <input type="text" name="additional_job_work" required>
+      <input type="text" name="additional_job_work"  >
     </div>
     <div class="form-group">
       <label>Start Date:</label>
-      <input type="date" name="additional_job_start" required>
+      <input type="date" name="additional_job_start"  >
     </div>
     <div class="form-group">
       <label>End Date:</label>
@@ -923,27 +932,27 @@
 
   <div class="form-group">
     <label>If Self-Employed - Total Monthly Income (after tax):</label>
-    <input type="text" name="self_employed_income" required>
+    <input type="text" name="self_employed_income"  >
   </div>
 
   <div class="form-group">
     <label>Name of Company/Organisation:</label>
-    <input type="text" name="self_employed_company" required>
+    <input type="text" name="self_employed_company"  >
   </div>
 
   <div class="form-group">
     <label>Job Description / Title / Rank:</label>
-    <input type="text" name="self_employed_title" required>
+    <input type="text" name="self_employed_title"  >
   </div>
 
   <div class="form-group">
     <label>Type of Work Undertaken:</label>
-    <input type="text" name="self_employed_work" required>
+    <input type="text" name="self_employed_work"  >
   </div>
 
   <div class="form-group">
     <label>Address Line 1:</label>
-    <input type="text" name="self_employed_address1" required>
+    <input type="text" name="self_employed_address1"  >
   </div>
   <div class="form-group">
     <label>Line 2:</label>
@@ -959,15 +968,15 @@
   </div>
   <div class="form-group">
     <label>Postal Code:</label>
-    <input type="text" name="self_employed_postal" required>
+    <input type="text" name="self_employed_postal"  >
   </div>
   <div class="form-group">
     <label>Country:</label>
-    <input type="text" name="self_employed_country" required>
+    <input type="text" name="self_employed_country"  >
   </div>
   <div class="form-group">
     <label>Primary Contact No:</label>
-    <input type="tel" name="self_employed_contact1" required>
+    <input type="tel" name="self_employed_contact1"  >
   </div>
   <div class="form-group">
     <label>Secondary Contact No:</label>
@@ -975,17 +984,17 @@
   </div>
   <div class="form-group">
     <label>Email ID:</label>
-    <input type="email" name="self_employed_email" required>
+    <input type="email" name="self_employed_email"  >
   </div>
 
   <div class="form-group">
     <label>When did you start this job?</label>
-    <input type="date" name="self_employed_start" required>
+    <input type="date" name="self_employed_start"  >
   </div>
 
   <div class="form-group">
     <label>Do you have any other additional paid jobs?</label>
-    <select name="self_employed_additional_jobs" required>
+    <select name="self_employed_additional_jobs"  >
       <option value="">Select</option>
       <option>Yes</option>
       <option>No</option>
@@ -995,19 +1004,19 @@
   <div class="sub-section">
     <div class="form-group">
       <label>Organisation:</label>
-      <input type="text" name="self_emp_add_job_org" required>
+      <input type="text" name="self_emp_add_job_org"  >
     </div>
     <div class="form-group">
       <label>Job Description / Title / Rank:</label>
-      <input type="text" name="self_emp_add_job_title" required>
+      <input type="text" name="self_emp_add_job_title"  >
     </div>
     <div class="form-group">
       <label>Type of Work Undertaken:</label>
-      <input type="text" name="self_emp_add_job_work" required>
+      <input type="text" name="self_emp_add_job_work"  >
     </div>
     <div class="form-group">
       <label>Start Date:</label>
-      <input type="date" name="self_emp_add_job_start" required>
+      <input type="date" name="self_emp_add_job_start"  >
     </div>
     <div class="form-group">
       <label>End Date:</label>
@@ -1023,7 +1032,7 @@
 
   <div class="form-group">
     <label>Do you have savings, properties, or other income (e.g., stocks, shares)?</label>
-    <select name="has_other_income" required>
+    <select name="has_other_income"  >
       <option value="">Select</option>
       <option>Yes</option>
       <option>No</option>
@@ -1033,52 +1042,52 @@
   <div class="sub-section">
     <div class="form-group">
       <label>Total Monthly Income From Other Sources:</label>
-      <input type="text" name="other_income_total" required>
+      <input type="text" name="other_income_total"  >
     </div>
     <div class="form-group">
       <label>Amount in GBP (£):</label>
-      <input type="text" name="other_income_gbp" required>
+      <input type="text" name="other_income_gbp"  >
     </div>
   </div>
 
   <div class="form-group">
     <label>How much do you spend each month on living costs?</label>
-    <input type="text" name="monthly_living_costs" required>
+    <input type="text" name="monthly_living_costs"  >
   </div>
 
   <div class="form-group">
     <label>How much of your total monthly income is given to family/dependants?</label>
-    <input type="text" name="monthly_income_given_to_family" required>
+    <input type="text" name="monthly_income_given_to_family"  >
   </div>
 
   <div class="form-group">
     <label>What is the cost to you personally of your trip? (£):</label>
-    <input type="text" name="trip_cost" required>
+    <input type="text" name="trip_cost"  >
   </div>
 
   <div class="form-group">
     <label>Total amount of money you have for this trip (£):</label>
-    <input type="text" name="trip_total_money" required>
+    <input type="text" name="trip_total_money"  >
   </div>
 
   <div class="form-group">
     <label>Cost of travel (airplane, boat, train) (£):</label>
-    <input type="text" name="trip_ticket_cost" required>
+    <input type="text" name="trip_ticket_cost"  >
   </div>
 
   <div class="form-group">
     <label>Cost of accommodation (£):</label>
-    <input type="text" name="trip_accommodation_cost" required>
+    <input type="text" name="trip_accommodation_cost"  >
   </div>
 
   <div class="form-group">
     <label>Cost of living expenses during trip (£):</label>
-    <input type="text" name="trip_living_expenses_cost" required>
+    <input type="text" name="trip_living_expenses_cost"  >
   </div>
 
   <div class="form-group">
     <label>Is someone else paying all or part of your trip?</label>
-    <select name="trip_sponsored" required>
+    <select name="trip_sponsored"  >
       <option value="">Select</option>
       <option>Yes</option>
       <option>No</option>
@@ -1088,7 +1097,7 @@
   <div class="sub-section">
     <div class="form-group">
       <label>Total Sponsored Amount (GBP £):</label>
-      <input type="text" name="trip_sponsored_amount" required>
+      <input type="text" name="trip_sponsored_amount"  >
     </div>
   </div>
 </div>
@@ -1099,12 +1108,12 @@
 
   <div class="form-group">
     <label>What do you plan to do whilst in the UK?</label>
-    <textarea name="uk_plan" rows="3" required></textarea>
+    <textarea name="uk_plan" rows="3"  ></textarea>
   </div>
 
   <div class="form-group">
     <label>Do you have any friends or family in the UK?</label>
-    <select name="has_family_or_friends_uk" required>
+    <select name="has_family_or_friends_uk"  >
       <option value="">Select</option>
       <option>Yes</option>
       <option>No</option>
@@ -1114,72 +1123,72 @@
   <div class="sub-section">
     <div class="form-group">
       <label>Relationship:</label>
-      <input type="text" name="relative_relationship" required>
+      <input type="text" name="relative_relationship"  >
     </div>
 
     <div class="form-group">
       <label>Family Name / Surname:</label>
-      <input type="text" name="relative_surname" required>
+      <input type="text" name="relative_surname"  >
     </div>
 
     <div class="form-group">
       <label>Given Name(s) / Forename(s):</label>
-      <input type="text" name="relative_given_name" required>
+      <input type="text" name="relative_given_name"  >
     </div>
 
     <div class="form-group">
       <label>Nationality:</label>
-      <input type="text" name="relative_nationality" required>
+      <input type="text" name="relative_nationality"  >
     </div>
 
     <div class="form-group">
       <label>Status in the UK:</label>
-      <input type="text" name="relative_status" required>
+      <input type="text" name="relative_status"  >
     </div>
 
     <div class="form-group">
       <label>Address Line 1:</label>
-      <input type="text" name="relative_address1" required>
+      <input type="text" name="relative_address1"  >
     </div>
 
     <div class="form-group">
       <label>Address Line 2:</label>
-      <input type="text" name="relative_address2" required>
+      <input type="text" name="relative_address2"  >
     </div>
 
     <div class="form-group">
       <label>Address Line 3:</label>
-      <input type="text" name="relative_address3" required>
+      <input type="text" name="relative_address3"  >
     </div>
 
     <div class="form-group">
       <label>Address Line 4:</label>
-      <input type="text" name="relative_address4" required>
+      <input type="text" name="relative_address4"  >
     </div>
 
     <div class="form-group">
       <label>Postal Code:</label>
-      <input type="text" name="relative_postal" required>
+      <input type="text" name="relative_postal"  >
     </div>
 
     <div class="form-group">
       <label>Primary Contact No:</label>
-      <input type="tel" name="relative_contact1" required>
+      <input type="tel" name="relative_contact1"  >
     </div>
 
     <div class="form-group">
       <label>Secondary Contact No:</label>
-      <input type="tel" name="relative_contact2" required>
+      <input type="tel" name="relative_contact2"  >
     </div>
 
     <div class="form-group">
       <label>Email ID:</label>
-      <input type="email" name="relative_email" required>
+      <input type="email" name="relative_email"  >
     </div>
 
     <div class="form-group">
       <label>Will you visit or stay with this person?</label>
-      <select name="stay_with_relative" required>
+      <select name="stay_with_relative"  >
         <option value="">Select</option>
         <option>Yes</option>
         <option>No</option>
@@ -1194,7 +1203,7 @@
 
   <div class="form-group">
     <label>Have you ever received medical treatment in the UK?</label>
-    <select name="received_medical_treatment_uk" required>
+    <select name="received_medical_treatment_uk"  >
       <option value="">Select</option>
       <option>Yes</option>
       <option>No</option>
@@ -1208,57 +1217,57 @@
 
   <div class="form-group">
     <label>Who invited you to the UK?</label>
-    <input type="text" name="uk_inviter" required>
+    <input type="text" name="uk_inviter"  >
   </div>
 
   <div class="form-group">
     <label>Family/Last Name of Inviter:</label>
-    <input type="text" name="uk_inviter_last_name" required>
+    <input type="text" name="uk_inviter_last_name"  >
   </div>
 
   <div class="form-group">
     <label>Given/First Name of Inviter:</label>
-    <input type="text" name="uk_inviter_first_name" required>
+    <input type="text" name="uk_inviter_first_name"  >
   </div>
 
   <div class="form-group">
     <label>Name of Institution, Business, or Organisation:</label>
-    <input type="text" name="uk_institution_name" required>
+    <input type="text" name="uk_institution_name"  >
   </div>
 
   <div class="form-group">
     <label>Type of Business:</label>
-    <input type="text" name="uk_institution_type" required>
+    <input type="text" name="uk_institution_type"  >
   </div>
 
   <div class="form-group">
     <label>Address Line 1:</label>
-    <input type="text" name="uk_institution_address1" required>
+    <input type="text" name="uk_institution_address1"  >
   </div>
 
   <div class="form-group">
     <label>Address Line 2:</label>
-    <input type="text" name="uk_institution_address2" required>
+    <input type="text" name="uk_institution_address2"  >
   </div>
 
   <div class="form-group">
     <label>Address Line 3:</label>
-    <input type="text" name="uk_institution_address3" required>
+    <input type="text" name="uk_institution_address3"  >
   </div>
 
   <div class="form-group">
     <label>Address Line 4:</label>
-    <input type="text" name="uk_institution_address4" required>
+    <input type="text" name="uk_institution_address4"  >
   </div>
 
   <div class="form-group">
     <label>Postal Code:</label>
-    <input type="text" name="uk_institution_postal" required>
+    <input type="text" name="uk_institution_postal"  >
   </div>
 
   <div class="form-group">
     <label>Contact Number:</label>
-    <input type="tel" name="uk_institution_contact" required>
+    <input type="tel" name="uk_institution_contact"  >
   </div>
 </div>
 
@@ -1269,7 +1278,7 @@
 
   <div class="form-group">
     <label>Is there any other information you wish to be considered as part of your application?</label>
-    <textarea name="additional_info" rows="5" placeholder="Type anything else you'd like to share..." required></textarea>
+    <textarea name="additional_info" rows="5" placeholder="Type anything else you'd like to share..."  ></textarea>
   </div>
 </div>
 
@@ -1279,7 +1288,7 @@
 
   <div class="form-group">
     <label>
-      <input type="checkbox" name="confirm_truth" required>
+      <input type="checkbox" name="confirm_truth"  >
       I confirm that the information I have provided is true and complete to the best of my knowledge.
     </label>
   </div>
@@ -1291,5 +1300,91 @@
 </div>
 
   </form>
+
+   <footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Logo + Description -->
+      <div class="footer-col logo-section">
+        <img src="./sivajison_logo.png" alt="Sivaji Son Logo" class="footer-logo" />
+        <p class="footer-text">
+          Established in 2016, Sivaji Son Tours and Travels Pvt Ltd began with a vision to revolutionize the travel industry through reliable, affordable, and tech-enabled solutions.
+        </p>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Travel Insurance -->
+      <div class="footer-col">
+        <h4>TRAVEL INSURANCE</h4>
+        <ul>
+          <li><a href="../../contact.html">ICICI Lombard</a></li>
+          <li><a href="../../contact.html">TATA Aig</a></li>
+          <li><a href="../../contact.html">Reliance</a></li>
+          <li><a href="../../contact.html">Aditya Birla</a></li>
+          <li><a href="../../contact.html">Care Health Insurance</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-col">
+        <h4>SERVICES</h4>
+        <ul>
+          <li><a href="../../contact.html">Fligth Ticket</a></li>
+          <li><a href="../../contact.html">Visa</a></li>
+          <li><a href="../../contact.html">Passport</a></li>
+          <li><a href="../../contact.html">Hotel Booking</a></li>
+          <li><a href="../../contact.html">Cruise</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col address-col">
+        <h4>CHENNAI</h4>
+        <ul>
+          <li>
+            <a href="https://maps.app.goo.gl/CaBiBK6gG2AwDP4P8" target="_blank">
+              VSD Plaza, No 1, 2nd Ave, AA Block,<br>Anna Nagar, Chennai, Tamil Nadu 600040
+            </a>
+          </li>
+          <li><a href="tel:+919655150814">+91 96551 50814</a></li>
+          <li><a href="mailto:Saranraj@sivajison.com">Saranraj@sivajison.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 SivajiSon Tours and Travels Pvt Ltd. All rights reserved.
+  </div>
+</footer>
+
+  <script>
+  document.getElementById("visa-form").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("http://localhost:5000/api/apply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      alert(result.message);
+    } catch (error) {
+      alert("Submission failed.");
+      console.error(error);
+    }
+  });
+</script>
+
 </body>
 </html>

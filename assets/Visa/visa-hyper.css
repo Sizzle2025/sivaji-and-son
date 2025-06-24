@@ -193,3 +193,8 @@ body {
 #toggleForm:checked ~ .call-widget-wrapper .call-widget-btn .arrow {
     transform: rotate(180deg);
 }
+
+/* Show when checkbox is checked */
+#toggleForm:checked ~ .call-widget-form-area {
+  display: block;
+}

@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>US Visa Application Form</title>
     <link rel="stylesheet" href="./application.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            /* padding: 20px; */
             color: #333;
         }
         .form-section {
@@ -124,9 +125,16 @@
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         End Preloader
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <section class="visa-banner">
+  <div class="visa-banner-content">
+    <h1>Welcome to the US Visa Application Portal</h1>
+    <p>Your journey to the United States starts here. Apply with confidence — secure, simple, and supported.</p>
+  </div>
+</section>
+
     <h1>US Visa Application Form</h1>
     
-    <form action="#" method="post">
+    <form action="/api/us-apply" method="POST" id="visa-form">
         <div class="form-section">
             <div class="section-title">START NEW APPLICATION</div>
             <div class="form-group">
@@ -203,7 +211,7 @@
             
             <div class="form-group">
                 <label for="place_of_birth">Place of Birth:</label>
-                <input type="text" id="place_of_birth" name="place_of_birth" required>
+                <input type="text" id="place_of_birth" name="place_of_birth"  >
             </div>
         </div>
 
@@ -212,7 +220,7 @@
             
             <div class="form-group">
                 <label for="nationality">Nationality:</label>
-                <input type="text" id="nationality" name="nationality" required>
+                <input type="text" id="nationality" name="nationality"  >
             </div>
             
             <div class="form-group">
@@ -225,17 +233,17 @@
             
             <div class="form-group">
                 <label for="national_id">National Identification Number:</label>
-                <input type="text" id="national_id" name="national_id" required>
+                <input type="text" id="national_id" name="national_id"  >
             </div>
             
             <div class="form-group">
                 <label for="ssn">U.S. Social Security Number:</label>
-                <input type="text" id="ssn" name="ssn" required>
+                <input type="text" id="ssn" name="ssn"  >
             </div>
             
             <div class="form-group">
                 <label for="tax_id">U.S. Taxpayer ID Number:</label>
-                <input type="text" id="tax_id" name="tax_id"required>
+                <input type="text" id="tax_id" name="tax_id" >
             </div>
         </div>
 
@@ -244,7 +252,7 @@
             
             <div class="form-group">
                 <label for="home_address">Home Address (Line 1):</label>
-                <input type="text" id="home_address" name="home_address" required>
+                <input type="text" id="home_address" name="home_address"  >
             </div>
             
             <div class="form-group">
@@ -254,7 +262,7 @@
             
             <div class="form-group">
                 <label for="home_city">City:</label>
-                <input type="text" id="home_city" name="home_city" required>
+                <input type="text" id="home_city" name="home_city"  >
             </div>
             
             <div class="form-group">
@@ -264,12 +272,12 @@
             
             <div class="form-group">
                 <label for="home_zip">Postal Zone/ZIP Code:</label>
-                <input type="text" id="home_zip" name="home_zip" required>
+                <input type="text" id="home_zip" name="home_zip"  >
             </div>
             
             <div class="form-group">
                 <label for="home_country">Country:</label>
-                <input type="text" id="home_country" name="home_country" required>
+                <input type="text" id="home_country" name="home_country"  >
             </div>
             
             <div class="form-group">
@@ -309,7 +317,7 @@
             
             <div class="form-group">
                 <label for="primary_phone">Primary Phone Number:</label>
-                <input type="tel" id="primary_phone" name="primary_phone" required>
+                <input type="tel" id="primary_phone" name="primary_phone"  >
             </div>
             
             <div class="form-group">
@@ -324,7 +332,7 @@
             
             <div class="form-group">
                 <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email"  >
             </div>
         </div>
 
@@ -333,7 +341,7 @@
             
             <div class="form-group">
                 <label for="passport_type">Passport/Travel Document Type:</label>
-                <input type="text" id="passport_type" name="passport_type" required>
+                <input type="text" id="passport_type" name="passport_type"  >
             </div>
             
             <div class="form-group">
@@ -343,17 +351,17 @@
             
             <div class="form-group">
                 <label for="passport_issuing_country">Country/Authority that Issued Passport/Travel Document:</label>
-                <input type="text" id="passport_issuing_country" name="passport_issuing_country" required>
+                <input type="text" id="passport_issuing_country" name="passport_issuing_country"  >
             </div>
             
             <div class="form-group">
                 <label for="passport_issuing_place">Where was the Passport/Travel Document Issued?</label>
-                <input type="text" id="passport_issuing_place" name="passport_issuing_place" required>
+                <input type="text" id="passport_issuing_place" name="passport_issuing_place"  >
             </div>
             
             <div class="form-group">
                 <label for="passport_issuing_city">City:</label>
-                <input type="text" id="passport_issuing_city" name="passport_issuing_city" required>
+                <input type="text" id="passport_issuing_city" name="passport_issuing_city"  >
             </div>
             
             <div class="form-group">
@@ -363,17 +371,17 @@
             
             <div class="form-group">
                 <label for="passport_issuing_country2">Country:</label>
-                <input type="text" id="passport_issuing_country2" name="passport_issuing_country2" required>
+                <input type="text" id="passport_issuing_country2" name="passport_issuing_country2"  >
             </div>
             
             <div class="form-group">
                 <label for="passport_issue_date">Issuance Date:</label>
-                <input type="date" id="passport_issue_date" name="passport_issue_date" required>
+                <input type="date" id="passport_issue_date" name="passport_issue_date"  >
             </div>
             
             <div class="form-group">
                 <label for="passport_expiry_date">Expiration Date:</label>
-                <input type="date" id="passport_expiry_date" name="passport_expiry_date" required>
+                <input type="date" id="passport_expiry_date" name="passport_expiry_date"  >
             </div>
             
             <div class="form-group">
@@ -390,7 +398,7 @@
             
             <div class="form-group">
                 <label for="trip_purpose">Purpose of Trip to the U.S.:</label>
-                <select id="trip_purpose" name="trip_purpose" required>
+                <select id="trip_purpose" name="trip_purpose"  >
                     <option value="">Select</option>
                     <option value="business">TEMP. BUSINESS PLEASURE VISITOR(B)</option>
                     <option value="conference">TEMP. BUSINESS CONFERENCE</option>
@@ -780,7 +788,7 @@
             
             <div class="form-group">
                 <label for="occupation">Primary Occupation:</label>
-                <input type="text" id="occupation" name="occupation" required>
+                <input type="text" id="occupation" name="occupation"  >
             </div>
             
             <div class="form-group">
@@ -903,5 +911,92 @@
 
         
     </form>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Logo + Description -->
+      <div class="footer-col logo-section">
+        <img src="./sivajison_logo.png" alt="Sivaji Son Logo" class="footer-logo" />
+        <p class="footer-text">
+          Established in 2016, Sivaji Son Tours and Travels Pvt Ltd began with a vision to revolutionize the travel industry through reliable, affordable, and tech-enabled solutions.
+        </p>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Travel Insurance -->
+      <div class="footer-col">
+        <h4>TRAVEL INSURANCE</h4>
+        <ul>
+          <li><a href="../../contact.html">ICICI Lombard</a></li>
+          <li><a href="../../contact.html">TATA Aig</a></li>
+          <li><a href="../../contact.html">Reliance</a></li>
+          <li><a href="../../contact.html">Aditya Birla</a></li>
+          <li><a href="../../contact.html">Care Health Insurance</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-col">
+        <h4>SERVICES</h4>
+        <ul>
+          <li><a href="../../contact.html">Fligth Ticket</a></li>
+          <li><a href="../../contact.html">Visa</a></li>
+          <li><a href="../../contact.html">Passport</a></li>
+          <li><a href="../../contact.html">Hotel Booking</a></li>
+          <li><a href="../../contact.html">Cruise</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col address-col">
+        <h4>CHENNAI</h4>
+        <ul>
+          <li>
+            <a href="https://maps.app.goo.gl/CaBiBK6gG2AwDP4P8" target="_blank">
+              VSD Plaza, No 1, 2nd Ave, AA Block,<br>Anna Nagar, Chennai, Tamil Nadu 600040
+            </a>
+          </li>
+          <li><a href="tel:+919655150814">+91 96551 50814</a></li>
+          <li><a href="mailto:Saranraj@sivajison.com">Saranraj@sivajison.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 SivajiSon Tours and Travels Pvt Ltd. All rights reserved.
+  </div>
+</footer>
+
+
+
+    <script>
+  document.getElementById("visa-form").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("http://localhost:5000/api/us-apply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      alert(result.message);
+    } catch (error) {
+      alert("Submission failed.");
+      console.error(error);
+    }
+  });
+</script>
 </body>
 </html>

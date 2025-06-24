@@ -16,3 +16,9 @@ document.querySelectorAll('.accordion-header').forEach(header => {
       const firstAccordion = document.querySelector('.accordion');
       firstAccordion.classList.add('open');
     });  
+
+    window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      document.getElementById('toggleForm').checked = true;
+    }, 3000); // 3000ms = 3 seconds
+  });
