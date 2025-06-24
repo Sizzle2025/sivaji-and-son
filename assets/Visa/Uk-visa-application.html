@@ -102,6 +102,74 @@
   0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+.visa-banner {
+  position: relative;
+  height: 23vh;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #004d40; /* fallback background */
+}
+
+.visa-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;  /* a bit larger for pan effect */
+  height: 110%;
+  background: url('./uk-application.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+  animation: zoomPan 20s ease-in-out infinite;
+  transform-origin: center;
+  filter: brightness(0.5); /* darken to improve text visibility */
+}
+
+.visa-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.visa-banner-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.visa-banner-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Animation */
+@keyframes zoomPan {
+  0% {
+    transform: scale(1.1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.2) translate(-2%, -2%);
+  }
+  100% {
+    transform: scale(1.1) translate(0, 0);
+  }
+}
+@media only screen and (max-width:700px) {
+    .visa-banner-content h1{
+        font-size: 1rem;
+    }
+    .visa-banner-content p{
+        font-size: 0.5rem;
+    }
+    .visa-banner {
+        height: 10vh;
+    }
+}
+
 
     </style>
 

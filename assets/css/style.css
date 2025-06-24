@@ -2550,6 +2550,10 @@ option {
 
 section {
   overflow: hidden;
+  background-color: white;
+}
+
+.client-brand-section{
   background-color: #f5f3f1;
 }
 
